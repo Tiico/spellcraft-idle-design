@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Spellforge · Spell design workspace</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">✧</span><div><span class="eyebrow">Untitled Mage Game / Design tools</span><h1>Spellforge <span>workshop</span></h1></div></div>
+        <div class="header-actions"><span id="catalog-version" class="version"></span><button id="shield-proposal">Add shield proposal</button><button id="cone-proposal">Add swarm proposal</button><button id="import">Import workspace</button><button id="export">Export workspace</button><button id="new-spell" class="primary">+ New spell</button></div>
+    </header>
+    <main>
+        <section class="intro"><div><span class="eyebrow">The spell designer’s workbench</span><h2>A little magic. Every connection.</h2><p>Explore the catalog, trace a fusion, or build your next spell.</p></div><div class="workspace-status"><span id="save-state"></span><button id="reset" class="text-button">Reset local drafts</button></div></section>
+        <div id="notice" role="status" aria-live="polite"></div>
+        <div class="workspace">
+            <aside class="panel library-panel" aria-label="Spell library">
+                <div class="panel-heading"><h2>Spell library</h2><span id="spell-count" class="count"></span></div>
+                <label class="search-label">Find a spell<input id="search" type="search" placeholder="Search names or effects…"></label>
+                <label class="filter-label">Show<select id="library-filter"><option value="all">All spells</option><option value="base">Base spells</option><option value="fusion">Fusions</option><option value="draft">Local drafts</option><option value="known">PRD decisions</option></select></label>
+                <div id="library"></div>
+                <div class="library-key"><span><i class="key-dot approved"></i>PRD decision</span><span><i class="key-dot"></i>Catalog proposal</span><span><i class="key-dot draft"></i>Local draft</span></div>
+            </aside>
+            <section class="canvas-column" aria-label="Spell connections">
+                <section class="panel atlas">
+                    <div class="atlas-heading"><div><span class="eyebrow">Ingredients → result → next fusion</span><h2>Fusion atlas</h2></div><div class="view-switch" aria-label="Connection view"><button id="map-view" aria-pressed="true">Map</button><button id="table-view" aria-pressed="false">Recipes</button></div></div>
+                    <div class="atlas-toolbar"><label>Availability<select id="milestone"><option value="4">Full catalog / after Wind</option><option value="0">Before Fire boss</option><option value="1">Before Ice boss</option><option value="2">Before Earth boss</option><option value="3">Before Wind boss</option></select></label><button id="clear-trace" class="text-button">Clear selection</button></div>
+                    <div class="map-scroll" id="map-scroll" tabindex="0" aria-label="Fusion map; scroll horizontally to explore"><div class="map" id="map"></div></div>
+                    <div id="recipes" class="table-scroll" hidden></div>
+                    <div class="map-caption"><span id="availability-summary"></span><span>Click a spell to trace its ingredients. Scroll the map sideways.</span></div>
+                </section>
+                <section class="panel bench" aria-label="Combination bench"><div><span class="eyebrow">Explore a pair</span><h2>Combination bench</h2><p>Look up a recipe or use a new pair as a starting point.</p></div><div class="pair"><label>First ingredient<select id="ingredient-a"></select></label><span aria-hidden="true">+</span><label>Second ingredient<select id="ingredient-b"></select></label></div><div id="pair-result"></div></section>
+                <details class="panel analysis"><summary><span id="analysis-summary"></span><span class="muted">Structure checks</span></summary><div id="analysis-detail"></div></details>
+            </section>
+            <aside class="panel inspector" id="inspector" aria-label="Spell details"></aside>
+        </div>
+        <section class="panel" id="relic-inventory-sources" aria-label="Permanent relic traits and stack inventory"></section>
+        <section class="panel loot-gift-sources" id="loot-gift-sources" aria-label="Manual item pickup and free shop gifts"></section>
+        <section class="panel venture-spirit-sources" id="venture-spirit-sources" aria-label="Venture spirits and shop policy"></section>
+        <section class="panel realm-idle-sources" id="realm-idle-sources" aria-label="Realm-exclusive spell drops"></section>
+        <section class="panel realm-sources" id="realm-sources" aria-label="Realm place proposals"></section>
+        <section class="panel daily-sources" id="daily-sources" aria-label="Daily resource proposals"></section>
+        <footer><p>Design workspace · All recipes are visible here. The game’s discovery rules still apply in the game.</p><p>PRD v1.2: Firebolt, Icebolt and the Frostfire recipe are named decisions. Other catalog content, later forge gates and costs are proposals. Local drafts do not change the shared catalog. Availability checks ingredients and gates with unlimited materials; combat, timing and balance are not simulated.</p><a href="https://tiico.github.io/untitled-mage-game-design/prototypes/ui-pixel-idle-v1/?variant=A&art=pixel" target="_blank" rel="noreferrer">Visual reference: ui-pixel-idle-v1 ↗</a></footer>
+    </main>
+    <dialog id="editor" aria-labelledby="editor-title">
+        <form id="spell-form">
+            <div class="dialog-heading"><div><span class="eyebrow">Local content draft</span><h2 id="editor-title">New spell</h2></div><button type="button" id="close-editor" aria-label="Close spell editor">×</button></div>
+            <p id="editor-note">Drafts are saved in this browser. Export a workspace to share your ideas.</p>
+            <div class="form-grid"><label>Spell name<input name="name" required maxlength="80"></label><label>Stable ID<input name="id" required pattern="[a-z][a-z0-9-]*" maxlength="48" placeholder="e.g. thunder-bloom"></label><label>Spell type<select name="kind"><option value="base">Base spell</option><option value="fusion">Fusion</option></select></label><label>Forge requirement<select name="level"><option value="0">0 · Starting spell</option><option value="1">1 · After Fire boss</option><option value="2">2 · After Ice boss</option><option value="3">3 · After Earth boss (proposal)</option></select></label></div>
+            <div id="base-fields" class="form-grid"><label>Shard realm<select name="realm"><option value="0">Fire</option><option value="1">Ice</option><option value="2">Earth</option><option value="3">Wind</option></select></label><label>Shard cost<input name="cost" type="number" min="0" max="1000000" step="1" value="10" required></label></div>
+            <div id="fusion-fields" class="form-grid" hidden><label>Ingredient A<select name="inputA"></select></label><label>Ingredient B<select name="inputB"></select></label></div>
+            <label>Effect / design intent<textarea name="role" rows="3" maxlength="600" required placeholder="What does this spell add to the collection?"></textarea></label>
+            <div class="form-grid"><label>Accent color<input name="color" type="color" value="#c5b4e3"></label><label>Map symbol<input name="symbol" maxlength="4" value="✧" required></label></div>
+            <p class="form-error" id="form-error" role="alert"></p>
+            <div class="dialog-actions"><button type="button" id="cancel-editor">Cancel</button><button class="primary" type="submit">Save draft</button></div>
+        </form>
+    </dialog>
+    <dialog id="reset-dialog" aria-labelledby="reset-title"><h2 id="reset-title">Reset local drafts?</h2><p>Your browser workspace will return to the shared catalog. Export first to keep a copy.</p><div class="dialog-actions"><button id="cancel-reset">Keep drafts</button><button id="confirm-reset" class="primary">Reset drafts</button></div></dialog>
+    <input type="file" id="import-file" accept="application/json,.json" hidden>
+    <script src="rarity-model.js"></script>
+    <script src="dungeon-model.js"></script>
+    <script src="realm-model.js"></script>
+    <script src="idle-spells-model.js"></script>
+    <script src="venture-spirits-model.js"></script>
+    <script src="relic-inventory-model.js"></script>
+    <script src="item-loot-model.js"></script>
+    <script src="free-gifts-model.js"></script>
+    <script type="module" src="./app.mjs"></script>
+</body>
+</html>
