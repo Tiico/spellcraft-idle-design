@@ -972,3 +972,5 @@ form>label {
 #venture-spirit-sources{margin-top:24px;padding:20px;border:1px solid #766b88;background:#20283d}#venture-spirit-sources>p{color:#bac9db;font-size:13px;line-height:1.6}
 
 #loot-gift-sources{margin-top:24px;padding:20px;border:1px solid #89734f;background:#202b3d}#loot-gift-sources p{color:#c3cfdc;font-size:13px;line-height:1.6}
+
+.relic-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.relic-source-grid article{padding:12px;background:#233047;border:1px solid #67768e}.relic-source-grid p{font-size:12px}#relic-inventory-sources{margin-top:24px;padding:20px}#relic-inventory-sources>p{font-size:13px;line-height:1.6;overflow-wrap:anywhere}@media(max-width:650px){.relic-source-grid{grid-template-columns:1fr}}
