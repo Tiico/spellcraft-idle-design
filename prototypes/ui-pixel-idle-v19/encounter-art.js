@@ -1,0 +1,10 @@
+/* Pixel bounds measured read-only at alpha > 96. Original image alpha is preserved. */
+const EncounterArt=(()=>{
+    const frames={"boss-watcher":{"size":[1246,1263],"bounds":[32,17,1214,1254]},"boss-warden":{"size":[1233,1275],"bounds":[26,41,1215,1210]},"boss-knight":{"size":[1024,1536],"bounds":[111,51,970,1485]},"boss-sentinel":{"size":[1402,1122],"bounds":[11,7,1397,1105]},"mob-slime":{"size":[1312,1199],"bounds":[293,163,1087,1021]},"mob-imp":{"size":[1312,1199],"bounds":[195,117,1250,1117]},"mob-bat":{"size":[1536,1024],"bounds":[45,182,1510,849]},"mob-beetle":{"size":[1374,1145],"bounds":[39,117,1350,1069]},"mob-basilisk":{"size":[1536,1024],"bounds":[23,25,1524,998]},"spirit-delver":{"size":[1331,1182],"bounds":[196,26,1262,1164]},"spirit-weaver":{"size":[1206,1304],"bounds":[56,37,1189,1264]},"spirit-echo":{"size":[1222,1287],"bounds":[102,95,1146,1165]},"chest-closed":{"size":[1312,1199],"bounds":[112,144,1221,1099]},"chest-open":{"size":[1312,1199],"bounds":[169,130,1190,1125]}};
+    const bossKeys=['boss-watcher','boss-warden','boss-knight','boss-sentinel'];
+    const monsters=[['mob-slime','Cinder Slime'],['mob-imp','Ashfang Imp'],['mob-bat','Emberwing Bat'],['mob-beetle','Obsidian Beetle'],['mob-basilisk','Magma Basilisk']];
+    function markup(key,extra=''){const f=frames[key];if(!f)return '';const [W,H]=f.size,[x,y,x1,y1]=f.bounds,L=Math.max(x1-x,y1-y);return `<span class="sprite roster-art ${extra}" data-sprite="${key}" aria-hidden="true"><img src="assets/${key.startsWith('chest-')?'gifts-v19':'roster-v18'}/${key}.png" alt="" draggable="false" style="width:${W/L*94}%;height:${H/L*94}%;transform:translate(${-(x+x1)/2/W*100}%,${-(y+y1)/2/H*100}%)"></span>`;}
+    const boss=(realm,node)=>realm===0?bossKeys[Math.max(0,[6,13,19,25].indexOf(node))]:'golem';
+    function enemy(){const p=RealmProgression.enabled()?RealmProgression.inspect():{realm:state.realm,node:1,tier:1};return p.realm===0?monsters[p.tier>1?4:p.node<7?0:p.node<14?1:p.node<20?2:3]:['slime',realms[p.realm]+' Slime'];}
+    return {frames,markup,boss,enemy,monsters};
+})();

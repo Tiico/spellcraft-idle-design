@@ -1,0 +1,236 @@
+/* Review 09: let the world communicate; keep decisions and next actions in reach.
+   Scroll remains available for large collections, optional detail and enlarged text. */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.signal{display:inline-grid;place-items:center;font:700 18px/1 system-ui;width:22px;height:22px;flex-shrink:0;vertical-align:middle}
+.signal-info{font:700 13px Georgia,serif;width:17px;height:17px;border:1px solid currentColor;border-radius:50%}
+.visual-metric{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-size:12px}
+.visual-metric b{font:700 13px 'Courier New',monospace;color:#f2d79c;font-variant-numeric:tabular-nums}
+.visual-metric .ui-icon{width:23px;height:23px}
+.compact-metrics{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.status-chip{display:inline-flex;align-items:center;border:1px solid #657e77;background:#30413d;color:#d7e3c2;padding:2px 6px;font-size:10px;white-space:nowrap}
+.page{padding:12px;min-height:100%}
+.page-heading{margin-bottom:10px}
+.page-heading h2{font-size:21px}
+.kicker{font-size:10px;letter-spacing:.5px}
+.tabs{margin:6px 0}
+.tabs button{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px}
+.tabs .ui-icon,.tabs .sprite{width:23px;height:23px}
+.rune-button{font-size:12px;min-height:46px;padding-block:10px}
+.text-button{font-size:12px}
+.bottom-nav button{font-size:10px}
+.bottom-nav{padding-top:4px;padding-bottom:max(5px,env(safe-area-inset-bottom))}
+.panel{padding:12px;margin-bottom:12px}
+.note{font-size:12px;line-height:1.5}
+.compact-notice{font-size:11px;color:#c7d0dc;line-height:1.45;padding:6px 0}
+.primary-dock{margin-top:auto;padding-top:8px;flex-shrink:0}
+.primary-dock.stack{gap:8px}
+/* Quiet realm: progress, yield, build and action, without a second page introduction. */
+.realm-page{height:100%}
+.scene{min-height:165px}
+.realm-location{padding:10px 12px;gap:7px}
+.realm-location .kicker{font-size:9px}
+.realm-location h2{font-size:17px}
+.realm-location .realm-switch{padding:4px 8px}
+.realm-switch>span:not(.sprite){font-size:11px}
+.idle-label{position:absolute;left:12px;bottom:9px;font-size:9px}
+.actor{top:31%}
+.cast-caption{bottom:25px}
+.scene-foot{bottom:9px;font-size:9px}
+.journey-sheet{padding:8px 12px 10px;flex-shrink:0}
+.trail-caption{display:none}
+.journey-status{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:28px;color:#d3dbc8;font-size:11px}
+.journey-status .visual-metric b{font-size:12px}
+.journey-sheet .progress-track{margin:0 0 4px}
+.mini-loadout{margin:6px 0;gap:8px;min-height:44px}
+.edit-build{margin-left:auto;background:#2c384e;border-color:#8e8d77}
+.mini-loadout .spell-icon{width:38px;height:38px}
+.timer-note{margin-top:6px;font-size:10px;display:flex;align-items:center;justify-content:center;min-height:20px}
+.realm-actions .rune-button{font-size:11px;min-height:46px}
+/* Return has one visual ledger and one primary action. The cap is never hidden. */
+.return-page,.result-page,.boss-prep,.ventures-page{height:100%;min-height:min-content;display:flex;flex-direction:column;gap:6px}
+.return-page .page-heading,.result-page .page-heading{margin-bottom:0}
+.return-hero{display:flex;align-items:center;gap:16px;min-height:64px;margin:2px 0}
+.return-mage{width:64px;height:64px;display:grid;margin:0}
+.return-time{display:flex;align-items:center;gap:5px}
+.return-time strong{font:700 24px 'Courier New',monospace;color:#f4d69c}
+.return-time>span{font-size:12px;color:#bdc9d6}
+.return-time .status-chip{margin-left:6px;font-size:9px}
+.return-hero small{font-size:11px}
+.reward-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:5px 0}
+.reward-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 2px;border:1px solid #899080;background:linear-gradient(#35433f,#26343d);box-shadow:inset 0 2px #64725e55}
+.reward-tile .ui-icon{width:30px;height:30px}
+.reward-tile b{font:700 17px 'Courier New',monospace;color:#f6dca5;font-variant-numeric:tabular-nums}
+.reward-tile>span:last-child{font-size:11px;color:#d0d9df}
+.return-path{position:relative;border-block:1px solid #48566b;padding:5px 0;font-size:11px;color:#c1ccd8}
+.return-path .realm-trail{margin:0}
+.return-path>.status-chip{float:right;margin-top:2px}
+.return-path>.kicker{font-size:10px}
+.return-path>.signal{font-size:14px}
+.reward-details{display:flex;align-items:center;justify-content:center;gap:6px;align-self:center;min-height:44px;padding:4px 12px}
+.return-page.center{align-items:center;justify-content:center}
+.return-page.center .primary-dock{width:100%}
+.return-page.center .return-mage{width:80px;height:80px;margin:12px}
+.result-page{align-items:center;justify-content:center}
+.result-page>*{flex-shrink:0}
+.result-page .result-art{width:86px;height:86px;margin:8px auto}
+.result-page .primary-dock{width:100%;margin-top:12px}
+.result-page p{margin:2px 0;font-size:12px}
+.result-page h3{font:700 17px 'Courier New',monospace;color:#f3d89f;margin:8px 0}
+.result-loot{justify-content:center;padding:12px}
+/* A single boss briefing: art, time and stats, four slots, familiar, enter. */
+.boss-prep{gap:7px}
+.boss-summary{display:flex;align-items:center;gap:10px}
+.boss-summary>.sprite{width:66px;height:66px}
+.boss-summary>div{min-width:0;flex:1}
+.boss-summary h3{font:700 16px/1.25 'Courier New',monospace;color:#f3d79e;margin:2px 0}
+.boss-summary .kicker{font-size:9px}
+.boss-summary .compact-metrics{gap:10px}
+.boss-summary .visual-metric{gap:3px}
+.boss-summary .visual-metric b{font-size:12px}
+.boss-summary .ui-icon{width:20px;height:20px}
+.boss-pattern{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;color:#d3c6db;min-height:27px;border-block:1px solid #4b5066}
+.boss-pattern .sprite{width:25px;height:25px}
+.boss-prep .slots{margin:2px 0;gap:8px}
+.boss-prep .loadout-button{aspect-ratio:auto;height:52px;min-height:52px;padding:3px}
+.boss-prep .slot .spell-icon{width:43px;height:43px}
+.toggle{font-size:11px}
+.familiar-summary{width:100%;display:flex;align-items:center;gap:9px;border:1px solid #68758c;background:#27344b;text-align:left;color:#eee2c9;padding:4px 8px;min-height:52px}
+.familiar-summary>.sprite{width:42px;height:42px}
+.familiar-summary>span:not(.sprite):not(.signal){flex:1;min-width:0}
+.familiar-summary strong{font-size:12px;display:block}
+.familiar-summary small{font-size:11px;color:#e2cb9b;display:block}
+.boss-prep .compact-notice{padding:2px 0}
+.boss-prep .primary-dock{padding-top:0}
+/* Two production cards keep stat buys visible; formulas live in an info sheet. */
+.ventures-page{gap:10px}
+.ventures-page .page-heading{margin:0}
+.venture-card{border:1px solid #778095;background:linear-gradient(#2c394f,#222f45);padding:8px;box-shadow:inset 0 2px #4a566d}
+.venture-top{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.venture-top>.sprite{width:48px;height:48px}
+.venture-top>div{min-width:0;flex:1}
+.venture-top h3{font:700 13px 'Courier New',monospace;margin:0 0 3px;color:#f1d7a3}
+.venture-top h3 small{color:#b8c4d3;font:11px system-ui;border:1px solid #627085;padding:1px 4px}
+.venture-top .visual-metric b{font-size:13px}
+.info-button{display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;color:#d9c397;background:none;border:0}
+.venture-purchases{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.venture-purchases .rune-button{font-size:10px;min-height:46px;padding:6px 10px;gap:3px}
+.venture-purchases .rune-button::before,.venture-purchases .rune-button::after{display:none}
+.venture-purchases .button-label{gap:1px}
+.venture-purchases .button-label>.ui-icon{display:none}
+.venture-purchases .button-cost{gap:1px}
+.venture-purchases .button-cost .ui-icon{width:20px;height:20px}
+.worker-strip{display:flex;align-items:center;gap:5px;font-size:10px;color:#becbd9;margin-top:5px;min-height:24px}
+.worker-strip>.sprite{width:24px;height:24px}
+.worker-strip>b{font-weight:500;color:#d0dfbb}
+.synergy-pill{margin-left:auto;display:flex;align-items:center;gap:2px;color:#dfd69c}
+.synergy-pill .sprite{width:23px;height:23px}
+/* Spellforge keeps the collection grid; fusion focuses on one chosen recipe. */
+.forge-page .page-heading{margin-bottom:6px}
+.forge-page .collection-grid{margin-top:10px}
+.collection-card{min-height:112px}
+.collection-card small{display:flex;align-items:center;justify-content:center;font-size:10px;gap:2px}
+.collection-card .inline-icon{width:18px;height:18px;margin:0}
+.collection-card strong{font-size:11px}
+.collection-page .slots{margin:8px 0}
+.collection-page .loadout-button{min-height:52px;padding:4px;aspect-ratio:auto;height:56px}
+.collection-page .spell-icon{width:44px;height:44px}
+.collection-tools{margin:8px 0}
+.collection-tools input,.collection-tools select{font-size:12px}
+.collection-meta{font-size:11px;margin:6px 0}
+.fusion-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:10px 0}
+.fusion-choices button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:#253249;border:1px solid #68778d;padding:5px 3px;color:#c4cfdb;font:10px/1.25 'Courier New',monospace;min-width:0;min-height:76px}
+.fusion-choices button[aria-pressed=true]{border-color:#e1bd79;background:#41443f;box-shadow:inset 0 -2px #dab671;color:#f5dda5}
+.fusion-choices .sprite{width:35px;height:35px}
+.fusion-choices span:not(.sprite){min-height:25px;text-align:center;display:flex;align-items:center}
+.fusion-workbench{display:grid;gap:6px;padding:10px;background:#26354a;border:1px solid #8d8a77}
+.recipe-equation{display:flex;align-items:center;justify-content:center;gap:8px}
+.recipe-equation>.sprite{width:49px;height:49px}
+.recipe-equation>b{font:20px 'Courier New',monospace;color:#c6b382}
+.fusion-workbench h3{font:700 16px 'Courier New',monospace;text-align:center;color:#f4dba4;margin:0}
+.recipe-status{display:flex;align-items:center;justify-content:center;gap:5px;font-size:11px;color:#bdcbd9}
+.recipe-status .ui-icon{width:21px;height:21px}
+.fusion-workbench .compact-notice{text-align:center;margin:0;padding:0;font-size:11px}
+.forge-upgrade{margin-top:10px}
+.forge-upgrade small{display:block;text-align:center;font-size:10px;color:#b8c5d5;margin-top:4px}
+/* Small dialogs explain one thing. Collections retain scroll and visible header resources. */
+.sheet{padding:10px 12px max(12px,env(safe-area-inset-bottom))}
+.sheet h3{font-size:18px}
+.sheet .row.between{margin-bottom:8px!important}
+.spell-detail-hero{display:flex;align-items:center;gap:12px;min-height:70px}
+.spell-detail-hero>.sprite{width:68px;height:68px}
+.spell-detail-hero p{font-size:12px;line-height:1.5;margin:0;color:#d0d8e3}
+.sheet .detail-stats{margin:10px 0;gap:7px}
+.sheet .detail-stats>div{padding:8px;font-size:11px}
+.sheet .detail-stats b{font-size:16px;margin-top:2px}
+.resource-balances{grid-template-columns:1fr 1fr;gap:6px;margin:6px 0}
+.resource-balances>div{display:grid;grid-template-columns:30px 1fr;gap:1px 5px;padding:7px;font-size:11px}
+.resource-balances .ui-icon{width:29px;height:29px;grid-row:1/3}
+.resource-balances strong{margin:0;font-size:14px}
+.power-explainer{padding:5px 0}
+.power-explainer>div:first-child{flex-direction:row;justify-content:center;gap:10px}
+.power-explainer .power-crest{width:58px;height:58px}
+.power-explainer strong{font-size:28px}
+.power-explainer>div>span:last-child{display:none}
+.power-equation{margin-top:8px;padding-top:8px}
+.power-equation .ui-icon{width:28px;height:28px}
+.power-equation b{font-size:18px}
+.sheet-power>p{font-size:12px;margin:8px 0 12px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.menu-grid button{display:flex;align-items:center;gap:8px;padding:9px;background:#202d44;border:1px solid #69778b;font-size:12px;min-height:52px;text-align:left}
+.menu-grid .ui-icon,.menu-grid .sprite{width:30px;height:30px}
+.prototype-controls{font-size:12px;margin-top:12px}
+.prototype-controls p{color:#bdc8d8}
+.realm-list{gap:6px;margin:4px 0}
+.realm-choice{min-height:54px;padding:6px 8px}
+.realm-choice>.ui-icon{width:31px;height:31px}
+.realm-choice-copy strong{font-size:13px}
+.realm-choice-copy small{margin-top:1px;font-size:11px}
+.realm-choice-action{min-width:27px}
+.sheet-map h4{font-size:13px;margin:10px 0 0}
+.farming-levels{margin:6px 0;gap:6px}
+.sheet-map>p{font-size:11px;margin-bottom:0}
+.toast{bottom:76px;font-size:12px;padding:10px}
+/* Swarm: the battlefield gets the flexible space; controls do not fall below it. */
+.swarm-page{min-height:0;height:100%;padding:10px 12px;gap:7px}
+.harvest-heading h2{font-size:20px;margin:1px 0 0}
+.harvest-heading .kicker{font-size:9px;letter-spacing:.5px}
+.harvest-heading .text-button{min-width:44px;min-height:44px}
+.swarm-field,.trial-page .swarm-field{min-height:175px}
+.swarm-tallies{font-size:11px;min-height:26px}
+.swarm-tallies b{font-size:14px}
+.swarm-instruction{font-size:11px;left:auto;right:auto;top:7px;width:max-content;max-width:calc(100% - 14px);padding:5px 10px;left:50%;transform:translateX(-50%)}
+.is-holding .swarm-instruction{opacity:0;transition:opacity .2s}
+.swarm-caption{font-size:10px;min-height:24px}
+.swarm-caption:empty{display:none}
+.swarm-loot{font-size:11px;gap:3px}
+.swarm-loot>span{display:flex;align-items:center;gap:4px}
+.swarm-loot .inline-icon{width:18px;height:18px}
+.swarm-build-row{display:grid;grid-template-columns:1fr 44px;gap:8px;flex-shrink:0;align-items:center}
+.swarm-slot{height:46px}
+.swarm-loadout{gap:7px}
+.swarm-slot .spell-icon{width:38px;height:38px}
+.swarm-slot .sprite,.swarm-slot .ui-icon{width:35px;height:35px}
+.swarm-controls{display:flex;align-items:stretch;gap:8px;flex-shrink:0}
+.swarm-cast{min-height:46px;gap:0;flex:1}
+.shield-trial-link{align-self:auto;display:flex;align-items:center;justify-content:center;gap:5px;min-height:46px;padding:4px 10px;border:1px solid #868d9c;background:#29374e;color:#e1d9c5;font:11px 'Courier New',monospace;white-space:nowrap}
+.shield-trial-link .sprite{width:27px;height:27px}
+.effect-badges{min-height:30px}
+.effect-badges>span{padding:4px 6px;font-size:11px}
+.trial-response-count{font-size:11px}
+.trial-attacker-label{display:flex;align-items:center;justify-content:center;font-size:12px;min-width:55px;padding:3px 6px}
+.swarm-trial{font-size:11px;padding:3px 6px}
+.swarm-trial button{min-height:44px;font-size:11px}
+/* Compact heights reduce scenery and ornamental spacing, never the main action targets. */
+@media(max-height:720px){.page{padding:10px 12px}.scene{min-height:165px}.journey-sheet{padding-block:5px 7px}.timer-note{margin-top:3px}.mini-loadout{margin:4px 0}.realm-trail{max-height:38px}.trail-boss{width:35px;height:35px}.trail-boss .sprite{width:29px;height:29px}.boss-prep{gap:5px}.boss-summary>.sprite{width:55px;height:55px}.boss-summary h3{font-size:14px}.boss-pattern{min-height:24px}.boss-prep .loadout-button{height:48px;min-height:48px}.boss-prep .slot .spell-icon{height:39px;width:39px}.boss-prep .familiar-summary{min-height:48px}.boss-prep .familiar-summary>.sprite{width:38px;height:38px}.return-page{gap:4px}.return-hero{min-height:58px}.return-mage{width:58px;height:58px}.reward-tile{padding:6px 2px}.reward-tile .ui-icon{width:27px;height:27px}.return-path{padding-block:4px}.ventures-page{gap:8px}.venture-card{padding:7px}.venture-top{margin-bottom:5px}.venture-top>.sprite{width:42px;height:42px}.swarm-page{padding:8px 10px;gap:6px}.harvest-heading h2{font-size:18px}.swarm-field,.trial-page .swarm-field{min-height:175px}.forge-page .page-heading{margin-bottom:4px}.fusion-choices{margin:7px 0;min-height:0}.fusion-workbench{padding:8px;gap:4px}.recipe-equation>.sprite{width:43px;height:43px}.forge-upgrade{margin-top:7px}}
+@media(max-width:360px){.crest-hud{grid-template-columns:127px minmax(0,1fr) 44px}.page-heading h2{font-size:20px}.reward-tile b{font-size:15px}.reward-tile>span:last-child{font-size:10px}.venture-top h3{font-size:12px}.venture-purchases .rune-button{font-size:10px;padding-inline:7px}.boss-summary .compact-metrics{gap:6px}.boss-summary .visual-metric b{font-size:11px}.boss-summary .visual-metric .ui-icon{width:18px;height:18px}.collection-card strong{font-size:10px}.collection-card{min-height:109px}.recipe-equation{gap:6px}.swarm-tallies{font-size:10px}.swarm-tallies b{font-size:12px}.swarm-loadout{gap:5px}.swarm-slot .sprite,.swarm-slot .ui-icon{width:32px;height:32px}.swarm-slot .spell-icon{width:35px;height:35px}.shield-trial-link{padding-inline:6px;font-size:10px}.shield-trial-link .sprite{width:23px;height:23px}.effect-badges>span{font-size:10px}.realm-location h2{font-size:15px}.realm-actions .rune-button{font-size:10px}}
+.return-trail{display:flex;align-items:center;gap:0;height:39px;padding:0 3px}
+
+/* Mobile review presets live behind Menu → Prototype controls, leaving the phone to the game. */
+@media(max-width:800px){.studio{padding-bottom:0}.device{height:100dvh}.prototype-switcher{display:none}}
+
+/* One cast, one shield, all properties in the same compact badge and trial. */
+.effect-badges .inline-icon{width:20px;height:20px;margin:0 1px 0 8px}
+.trial-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px;flex-shrink:0}
+.trial-probe{display:flex;align-items:center;justify-content:center;gap:5px;padding-inline:10px;font-size:11px}
+.trial-probe>.sprite{width:25px;height:25px}
+@media(max-width:360px){.trial-probe{font-size:10px;gap:3px}.trial-probe>.sprite{width:21px;height:21px}}
