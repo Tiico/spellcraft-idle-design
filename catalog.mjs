@@ -1,9 +1,9 @@
 // The simulator catalog. Proposed content is never an implicit PRD decision.
 export const metadata = {
-    version: '2026.11.01.4',
-    prdVersion: '1.15',
-    lastReviewed: '2026-11-01',
-    sourcePrdSha256: 'fc5ad1dab36855f224e38ec1b823c386611bd67dcdd4909bcf6ef4752caf4c89'
+    version: '2026.11.02.1',
+    prdVersion: '1.16',
+    lastReviewed: '2026-11-02',
+    sourcePrdSha256: '279e723ebbbcdcbd603c59f0f466302cba312aa0d6bec78f6b7b97927fcd116c'
 };
 export const realms = ['Fire', 'Ice', 'Earth', 'Wind'];
 export const rules = {

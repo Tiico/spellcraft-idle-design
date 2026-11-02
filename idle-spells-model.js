@@ -12,7 +12,7 @@
     const fresh=()=>({bank:[0,0,0,0],misses:[0,0,0,0],windows:{},receipts:[],unseen:[]});
     const canFarm=(p,r)=>Number.isInteger(r)&&r>=0&&r<4&&(r===0||p.won.slice(0,r).every(Boolean));
     function credit(player,{id,windowId,realm,seconds,source='idle',paused=false,samples=[]}){
-        if(typeof id!=='string'||typeof windowId!=='string'||!/^[-a-z0-9]{1,96}$/i.test(id)||!/^[a-z0-9][-a-z0-9]{0,95}$/i.test(windowId)||!canFarm(player,realm)||!Number.isFinite(seconds)||seconds<0||!['idle','absence'].includes(source)||paused||(source==='idle'&&!player.idle?.length))return {ok:false,reason:'No qualifying idle time'};
+        if(typeof id!=='string'||typeof windowId!=='string'||!/^[-a-z0-9]{1,96}$/i.test(id)||!/^[a-z0-9][-a-z0-9]{0,95}$/i.test(windowId)||!canFarm(player,realm)||!Number.isFinite(seconds)||seconds<0||!['idle','absence'].includes(source)||paused||(source==='idle'&&!player.idle?.some(Boolean)))return {ok:false,reason:'No qualifying idle time'};
         const key=JSON.stringify([windowId,realm,seconds,source]),old=player.realmFinds.receipts.find(r=>r.id===id);
         if(old)return old.key===key?{ok:true,duplicate:true,receipt:old}:{ok:false,reason:'Conflicting idle report'};
         if(!Array.isArray(samples))return {ok:false,reason:'Missing or invalid random input'};
