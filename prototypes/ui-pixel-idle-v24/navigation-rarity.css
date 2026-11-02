@@ -1,0 +1,72 @@
+/* Same game and feature grid, three structural navigation proposals. */
+.launcher-icon{display:inline-grid;grid-template-columns:repeat(3,5px);grid-template-rows:repeat(3,5px);gap:3px;flex-shrink:0;width:21px;height:21px;align-content:center;justify-content:center}
+.launcher-icon i{display:block;width:5px;height:5px;background:#f2d18d;box-shadow:0 1px #6c5531}
+.compact-dock{grid-template-columns:repeat(3,1fr);padding:0 4px max(2px,env(safe-area-inset-bottom))}
+.compact-dock button{min-height:44px;flex-direction:row;gap:7px;font-size:11px}
+.compact-dock .sprite{width:25px;height:25px}
+.floating-launcher{position:absolute;z-index:23;right:9px;bottom:max(9px,env(safe-area-inset-bottom));width:57px;height:57px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:radial-gradient(#514563,#242d46);color:#f7ddaa;border:2px solid #d6b477;border-radius:18px 18px 13px 13px;box-shadow:inset 0 0 0 3px #7e6a4444,0 4px #0b1425,0 0 17px #d6b47722;font:10px 'Courier New',monospace}
+#phone[data-nav=B] .realm-actions,#phone[data-nav=B] .primary-dock,#phone[data-nav=B] .swarm-controls{margin-right:64px}
+#phone[data-nav=B] .realm-actions .rune-button{padding-inline:12px;font-size:10px}
+#phone[data-nav=B] .collection-page{padding-bottom:80px}
+#phone[data-nav=B] .trial-controls{margin-right:64px;grid-template-columns:1fr}
+#phone[data-nav=B] .trial-controls .rune-button{min-height:44px;padding-block:5px;font-size:10px}
+#phone[data-nav=B] .fight-bottom{padding-right:78px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.feature-grid button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:linear-gradient(#334058,#233148);border:1px solid #748096;box-shadow:inset 1px 1px #536077;min-height:68px;min-width:0;padding:5px 3px;color:#f0dfbc}
+.feature-grid .sprite,.feature-grid .ui-icon{width:31px;height:31px}
+.feature-grid strong{font:700 11px/1.2 'Courier New',monospace;text-align:center}
+.feature-grid small{font:9px/1.2 system-ui;color:#b8c3d4}
+.sheet-features{padding:10px 12px max(12px,env(safe-area-inset-bottom))}
+.sheet-features .row.between{margin-bottom:7px!important}
+.future-page{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%}
+.future-page .rune-button{max-width:270px}
+.nav-study-choices{display:grid;gap:5px;margin-bottom:8px}.nav-study-choices button{min-height:44px;color:#ead6b1;background:#1c2940;border:1px solid #7e8b9d;font-size:12px}
+/* Rarity is named as well as colored and never replaces a spell name. */
+.rarity-tag{font:10px/1.25 system-ui;color:var(--rarity);border:1px solid currentColor;padding:2px 5px;display:inline-flex;align-items:center;white-space:nowrap;background:#101a2b88}
+.collection-card .rarity-tag{font-size:9px;margin-top:-1px}
+.collection-card{gap:3px}
+.rarity-forge{height:100%;min-height:min-content;display:flex;flex-direction:column;gap:8px}
+.forge-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;flex-shrink:0}
+.forge-heading h2{font:700 20px 'Courier New',monospace;color:#f1d9a7;margin:0}
+.forge-heading .tabs{margin:0;min-width:144px}
+.forge-heading .tabs button{min-height:40px;font-size:11px;padding-inline:10px}
+.fusion-equation{position:relative;display:flex;align-items:center;justify-content:center;gap:5px;width:100%;padding:7px 11px 7px 7px;border:1px solid #7e8b99;background:#253349;color:#e2c993;min-height:86px}
+.fusion-parent{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;flex:1}
+.fusion-parent>.sprite{width:42px;height:42px;border:1px solid var(--rarity);background:#1a273c}
+.fusion-parent>strong{font:700 10px/1.2 'Courier New',monospace;color:#e8d9b9;text-align:center;min-height:12px}
+.fusion-parent .rarity-tag{font-size:9px;padding:1px 4px}
+.fusion-equation>b{font:18px 'Courier New',monospace}
+.fusion-equation .signal{width:17px;font-size:16px}
+.fusion-unknown{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;min-width:0}
+.fusion-unknown>.sprite{width:43px;height:43px}
+.fusion-unknown small{font-size:10px;line-height:1.2;text-align:center;color:#bfccd9}
+.equation-edit{position:absolute;right:4px;top:2px;font-size:11px;color:#d8bb83}
+.rarity-odds{padding:8px;border:1px solid #67768b;background:#202e44;flex-shrink:0}
+.rarity-odds>.row{font-size:11px;margin-bottom:6px;gap:6px}
+.rarity-odds strong{font-size:12px}.rarity-odds small{font-size:10px;color:#b2c0d2}
+.odds-bar{display:flex;height:6px;background:#101b2b;margin-bottom:7px}.odds-bar i{height:100%}
+.odds-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}
+.odds-grid>div{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--rarity)}
+.odds-grid span{font:9px/1.2 system-ui}.odds-grid b{font:700 15px 'Courier New',monospace}.zero-odds{opacity:.6}
+.cost-summary{display:flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0;min-height:29px;border-block:1px solid #536178;padding:4px 0;font-size:11px;color:#c7d0dc}
+.cost-summary>span:first-child{margin-right:auto}.cost-summary .visual-metric b{font-size:13px}
+.fusion-risk{display:flex;flex-direction:column;align-items:center;gap:2px;flex-shrink:0;color:#d1dfbc;font-size:11px;line-height:1.3}
+.fusion-risk>span{display:flex;align-items:center;gap:2px}.fusion-risk small{font-size:10px;color:#c4cdd9}
+.best-owned{font-size:10px;margin:0;color:#c0ccdc;text-align:center}.best-owned .rarity-tag{font-size:9px}
+.rarity-forge .primary-dock{padding-top:0}
+.rarity-forge .forge-upgrade{margin-top:0}
+.rarity-forge .forge-upgrade .rune-button{min-height:44px;font-size:11px}
+.fusion-outcome{display:flex;flex-direction:column;align-items:center;gap:7px;padding:13px;border:2px solid var(--rarity);background:radial-gradient(#474350,#243248);flex-shrink:0}
+.fusion-outcome>.sprite{width:65px;height:65px;filter:drop-shadow(0 0 8px #f0d7a122)}
+.fusion-outcome h3{font:700 18px 'Courier New',monospace;text-align:center;color:#f5deb0;margin:0}
+.outcome-rarity{font:700 14px 'Courier New',monospace;color:var(--rarity)}
+.fusion-outcome .cost-summary{width:100%}.fusion-outcome p{margin:0;font-size:11px}
+.ingredient-safety{display:flex;align-items:center;justify-content:center;color:#c7dfac}
+.recipe-picker{display:grid;gap:8px}.recipe-picker button{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;background:#243249;border:1px solid #7c8a9f;padding:8px;min-height:76px;color:#e6d3af}.recipe-picker .sprite{width:35px;height:35px}.recipe-picker button>span:not(.sprite){flex-basis:100%;font:11px 'Courier New',monospace}.recipe-picker small{font-size:10px;color:#becbdc}
+@media(max-height:720px){.rarity-forge{gap:6px}.fusion-equation{min-height:81px;padding-block:5px}.rarity-odds{padding:6px}.rarity-odds>.row{margin-bottom:4px}.cost-summary{min-height:26px;padding-block:2px}.fusion-outcome{padding:10px;gap:5px}.feature-grid button{min-height:63px}.feature-grid .sprite,.feature-grid .ui-icon{width:28px;height:28px}}
+@media(max-width:360px){.forge-heading h2{font-size:18px}.forge-heading .tabs{min-width:133px}.feature-grid strong{font-size:10px}.fusion-parent>strong{font-size:9px}.fusion-parent .rarity-tag{font-size:8px}.fusion-equation{gap:3px}.odds-grid{gap:1px}.odds-grid span{font-size:8px}.odds-grid b{font-size:14px}.rarity-forge .rune-button{font-size:11px}#phone[data-nav=B] .swarm-controls{gap:5px}#phone[data-nav=B] .shield-trial-link{font-size:9px;padding-inline:4px}#phone[data-nav=B] .shield-trial-link>.sprite{width:21px;height:21px}}
+.forge-title{display:flex;flex-direction:column;justify-content:center;gap:2px;min-height:44px;background:none;border:0;padding:0;color:#f1d9a7;text-align:left;flex-shrink:0}
+.forge-title strong{font:700 19px 'Courier New',monospace}.forge-title small{font:10px 'Courier New',monospace;color:#bfc8d5}
+.fusion-parent .rarity-tag{font-size:10px}.fusion-parent>strong{font-size:10px}
+@media(max-width:360px){.forge-title strong{font-size:18px}.fusion-parent .rarity-tag{font-size:9px}}
+#phone[data-nav=B] .swarm-build-row{margin-right:64px;gap:5px}

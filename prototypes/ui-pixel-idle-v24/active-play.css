@@ -1,0 +1,132 @@
+/* Realm progression remains visual and secondary to the world. */
+.realm-trail{display:flex;align-items:center;padding:0 3px;gap:0}
+.trail-stop{display:grid;place-items:center;width:24px;height:28px;flex:0 0 24px}
+.trail-stop>i{display:block;width:10px;height:10px;transform:rotate(45deg);border:1px solid #8a91a2;background:#1c2940;box-shadow:inset 1px 1px #11192c}
+.trail-stop.complete>i{background:#d1b56f;border-color:#f0d697;box-shadow:0 0 5px #d0ab4733}
+.trail-stop.current>i{width:16px;height:16px;border:2px solid #f8d994;background:#a38348;box-shadow:0 0 0 3px #e3bd5a19,0 0 12px #f4d78b55}
+.trail-pipe{height:2px;background:#5a657b;flex:1;box-shadow:0 1px #0f1a2c}
+.trail-pipe.complete{background:#c4a86c}
+.trail-boss{display:grid;place-items:center;width:41px;height:41px;border:1px solid #67738a;background:#19283f;flex-shrink:0;margin-left:4px;box-shadow:inset 1px 1px #46536a}
+.trail-boss .sprite{width:34px;height:34px;filter:saturate(.5);opacity:.7}
+.trail-boss.ready{border-color:#e7bc75;box-shadow:inset 0 0 0 2px #ab915a66,0 0 10px #d9af4833}
+.trail-boss.ready .sprite,.trail-boss.complete .sprite{filter:none;opacity:1}
+.trail-boss.complete{border-color:#9fae85;background:#2b433a}
+.trail-caption{display:flex;justify-content:space-between;color:#aebbd0;font-size:9px;margin:3px 0 10px}
+.realm-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.realm-actions .rune-button{font-size:10px;padding:11px 16px;min-height:46px}
+.map-stage-dot{display:block;width:11px;height:11px;background:#6f7c94;border:1px solid #b2bed0;transform:rotate(45deg);box-shadow:inset 1px 1px #233048}
+.level-choice.current .map-stage-dot{background:#eed08a;border-color:#ffe9b9;box-shadow:0 0 9px #e1b85744}
+
+/* A dense spatial swarm, directed by the finger and powered by the saved idle build. */
+.cone-art{position:relative;display:inline-block;isolation:isolate}
+.cone-ray{position:absolute;inset:8%;transform:rotate(var(--ray));transform-origin:50% 85%}
+.cone-ray>.sprite{width:100%;height:100%}
+.swarm-page{height:100%;min-height:505px;padding:12px 14px;display:flex;flex-direction:column;gap:9px;background:#192238}
+.harvest-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-shrink:0}
+.harvest-heading h2{font:700 20px/1.2 'Courier New',monospace;color:#f2dcae;margin:3px 0 0}
+.harvest-heading .kicker{font-size:8px;letter-spacing:1px}
+.harvest-heading .text-button{min-height:42px;font-size:10px;padding:4px 6px}
+.swarm-tallies{display:flex;align-items:center;justify-content:space-between;min-height:25px;flex-shrink:0;color:#b6c6d4;font-size:11px}
+.swarm-tallies>span{display:flex;align-items:center;gap:4px}
+.swarm-tallies b{font:700 14px 'Courier New',monospace;color:#f3d79b}
+.swarm-tallies .inline-icon{width:22px;height:22px;margin:0}
+.swarm-tallies>span:last-child{color:#bad3ae}
+.swarm-field{position:relative;flex:1;min-height:230px;isolation:isolate;overflow:hidden;border:2px solid #9b8b6d;background:#203b39;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair;--magic:#ffbc6b}
+.swarm-field .scenery{background-position:var(--realm-x) 50%;background-size:300% 100%;opacity:.82}
+.swarm-field .scenery.ice{background-size:cover;background-position:center}
+.harvest-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(#142139b8,transparent 36%,#14213966)}
+.swarm-instruction{position:absolute;z-index:5;top:8px;left:5px;right:5px;color:#f3dfb7;font:10px/1.4 'Courier New',monospace;text-align:center;text-shadow:1px 2px #142239;pointer-events:none}
+.swarm-mobs{position:absolute;inset:0;pointer-events:none}
+.swarm-mob{position:absolute;left:calc(var(--mx)*1%);top:calc(var(--my)*1%);width:28px;height:29px;transform:translate(-50%,-50%);pointer-events:none;isolation:isolate}
+.swarm-mob>.sprite{width:28px;height:28px;position:relative;z-index:1;transform-origin:50% 85%}
+.mob-shadow{position:absolute;left:4px;right:3px;bottom:0;height:6px;background:#0d1d2a66;border-radius:50%}
+.swarm-mob.hit>.sprite{animation:swarm-squash .18s ease-out}
+.swarm-mob.popped>.sprite{animation:swarm-pop .22s ease-out forwards}
+.swarm-mob.popped .mob-shadow{opacity:0}
+.mob-pop{position:absolute;inset:-4px;opacity:0;pointer-events:none;background:radial-gradient(circle,#fff3b9,transparent 30%,var(--magic),transparent 63%);z-index:2;border-radius:50%}
+.popped .mob-pop{animation:swarm-spark .3s ease-out both}
+.swarm-mage{position:absolute;left:calc(50% - 25px);bottom:28px;width:50px;height:50px;pointer-events:none;z-index:4}
+.swarm-mage>.sprite{width:50px;height:50px}
+.swarm-fx{position:absolute;inset:0;pointer-events:none;z-index:6}
+.swarm-bolt{position:absolute;left:50%;top:91%;width:30px;height:30px;margin:-15px;animation:swarm-flight .15s ease-in both;filter:drop-shadow(0 0 5px var(--magic))}
+.swarm-bolt>.sprite{width:30px;height:30px}
+.swarm-cone{position:absolute;inset:0;width:100%;height:100%;animation:swarm-wash .36s ease-out both;overflow:visible;mix-blend-mode:screen}
+.swarm-cone polygon{fill:var(--magic);fill-opacity:.42;stroke:var(--magic);stroke-opacity:.8;stroke-width:.4}
+.swarm-cone polyline{fill:none;stroke:#e8f8ff;stroke-width:.8;stroke-opacity:.75}
+.swarm-aim{position:absolute;left:50%;top:40%;width:42px;height:42px;border:1px solid #ffe8a799;box-shadow:0 0 0 5px #f3d67a16,inset 0 0 14px #f3d67a22;border-radius:50%;transform:translate(-50%,-50%);z-index:7;pointer-events:none;opacity:0}
+.is-holding .swarm-aim{opacity:1}
+.swarm-caption{position:absolute;bottom:5px;left:5px;right:5px;font:9px/1.3 'Courier New',monospace;text-align:center;color:#f6deb1;text-shadow:1px 2px #152239;pointer-events:none;z-index:8}
+.swarm-field.realm-fire .swarm-mob>.sprite{filter:hue-rotate(145deg)}
+.swarm-field.realm-earth .swarm-mob>.sprite{filter:hue-rotate(285deg)}
+.swarm-field.realm-wind .swarm-mob>.sprite{filter:hue-rotate(40deg)}
+.swarm-field[data-active-spell=ice]{--magic:#93dcff}
+.swarm-field[data-active-spell=frost],.swarm-field[data-active-spell=frostcone]{--magic:#c8a9ff}
+.swarm-field[data-active-spell=frostcone] .swarm-cone polygon{fill:#c9b7ff;stroke:#fbc27f;stroke-width:1}
+.swarm-loot{display:grid;grid-template-columns:1fr auto;gap:5px;color:#b6c6d7;font-size:10px;flex-shrink:0}
+.swarm-loot-track{grid-column:1/-1;height:5px;border:1px solid #727e91;background:#101b2b}
+.swarm-loot-track i{display:block;height:100%;background:linear-gradient(90deg,#a2b58a,#efd18c);transition:width .15s}
+.swarm-build-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:25px;flex-shrink:0}
+.swarm-build-heading .kicker{font-size:8px;letter-spacing:.8px}
+.swarm-build-heading .text-button{font-size:10px;padding:3px 0;min-height:28px}
+.swarm-loadout{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex-shrink:0}
+.swarm-slot{display:grid;place-items:center;min-width:0;height:52px;border:2px solid #59677d;background:#202c42;box-shadow:inset 0 0 0 2px #101c2e}
+.swarm-slot .spell-icon{width:42px;height:42px;background:none;border:0;box-shadow:none;padding:0}
+.swarm-slot .sprite,.swarm-slot .ui-icon{width:39px;height:39px}
+.swarm-slot.is-casting{border-color:#e8c789;box-shadow:inset 0 0 0 2px #9a7d49,0 0 10px #e7c66d22;background:#3a3c3c}
+.swarm-cast{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;flex-shrink:0;min-height:47px;padding:8px 22px;font-size:12px;touch-action:none;user-select:none;-webkit-user-select:none}
+.swarm-cast small{font:9px/1.3 system-ui;color:#e4dfcc}
+.swarm-cast.holding{background:#856c3f;box-shadow:inset 0 0 0 2px #ffe5a466}
+.harvest-note{font-size:10px;line-height:1.4;text-align:center;color:#b7c6d7;flex-shrink:0;margin:0}
+.swarm-trial{display:flex;align-items:center;gap:6px;padding:5px 7px;border:1px solid #9b8760;background:#34394b;font-size:10px;flex-shrink:0}
+.swarm-trial>.sprite{width:27px;height:27px}.swarm-trial>span:not(.sprite){flex:1}.swarm-trial button{background:#202b41;border:1px solid #9d926e;color:#f0d59f;padding:7px;font-size:9px;min-height:34px}
+.cone-recipe{margin-top:15px}.recipe-ingredients{display:flex;justify-content:center;gap:20px;margin:12px 0}.recipe-ingredients>.sprite{width:58px;height:58px}
+.boss-minions{position:absolute;inset:0;pointer-events:none;z-index:2}
+.boss-minion{position:absolute;width:29px;height:29px;transform:translate(-50%,-50%)}.boss-minion>.sprite{width:29px;height:29px;filter:hue-rotate(40deg)}
+.boss-summon-label{position:absolute;left:8px;right:8px;top:6px;text-align:center;z-index:4;font:10px 'Courier New',monospace;color:#f6dba5;text-shadow:1px 2px #152239}
+.boss-spell-flash{position:absolute;left:45%;top:40%;width:50px;height:50px;z-index:4;pointer-events:none;animation:boss-spell-flash .6s ease-out both;filter:drop-shadow(0 0 8px #c8a7ff)}
+.boss-spell-flash>.sprite{width:50px;height:50px}.boss-spell-flash.cone{width:110px;height:110px;left:35%;top:28%}.boss-spell-flash.cone>.sprite{width:110px;height:110px}
+@keyframes swarm-flight{from{opacity:1}to{left:var(--tx);top:var(--ty);opacity:1}}
+@keyframes swarm-pop{0%{transform:scale(1)}35%{transform:scale(1.32,.75);filter:brightness(1.5)}100%{transform:scale(.15);opacity:0}}
+@keyframes swarm-spark{0%{opacity:.9;transform:scale(.45)}100%{opacity:0;transform:scale(1.6)}}
+@keyframes swarm-squash{50%{transform:scale(1.2,.8)}}
+@keyframes swarm-wash{0%{opacity:.8}100%{opacity:0}}
+@keyframes boss-spell-flash{from{opacity:1;transform:scale(.6)}to{opacity:0;transform:scale(1.25)}}
+@media(max-width:360px){.realm-actions{gap:7px}.realm-actions .rune-button{font-size:9px;padding-inline:15px}.swarm-page{padding:9px 11px;gap:7px;min-height:485px}.harvest-heading h2{font-size:18px}.harvest-heading .kicker{font-size:7px}.swarm-field{min-height:205px}.swarm-instruction{font-size:9px}.swarm-mob,.swarm-mob>.sprite{width:24px;height:24px}.swarm-tallies{font-size:10px}.swarm-slot{height:47px}.swarm-slot .sprite,.swarm-slot .ui-icon{width:35px;height:35px}.swarm-slot .spell-icon{width:38px;height:38px}.swarm-caption{font-size:8px}.harvest-note{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.swarm-bolt,.swarm-cone,.mob-pop,.boss-spell-flash{display:none}.swarm-mob.popped{opacity:0}.swarm-mob>.sprite{transform:none!important}}
+.boss-summon-label{padding:6px 8px;border:1px solid #9b8c69;background:#162339e8;box-shadow:0 2px 0 #0d1726;color:#f6dba5;text-shadow:none}
+
+.swarm-instruction{left:7px;right:7px;top:6px;padding:4px 5px;background:#142239d9;border:1px solid #8f886555;text-shadow:none}
+.swarm-caption{padding:4px 3px;background:#142239db;border:1px solid #8f886544;text-shadow:none}
+/* Utility spells share the pixel-art language and never replace permanent HUD stats. */
+.support-art{position:relative;display:inline-grid;place-items:center;isolation:isolate}
+.support-art>.ui-icon{width:91%;height:91%}
+.support-art.ward>.ui-icon{filter:hue-rotate(130deg) saturate(.8)}
+.shield-flame{position:absolute;left:26%;top:34%;width:52%;height:52%;z-index:2;filter:drop-shadow(0 0 2px #ffba5d)}
+.shield-flame>.sprite{width:100%;height:100%}
+.mage-barrier{position:absolute;inset:-7px -10px -3px;border:2px solid #b5e6ffbb;border-radius:48% 48% 42% 42%;box-shadow:inset 0 0 16px #8fd5ff33,0 0 11px #9adaff44;background:linear-gradient(110deg,#a9dfff22,transparent 50%,#a9dfff22);pointer-events:none;z-index:5}
+.mage-barrier.fiery{border-color:#ffce8abb;box-shadow:inset 0 0 14px #ffb36633,0 0 12px #ffc27d55;background:linear-gradient(110deg,#ffc98822,transparent 50%,#ffa66022)}
+.swarm-mage.shield-empowered{filter:drop-shadow(0 0 7px #b88fffa0)}
+.effect-badges{display:flex;flex-wrap:wrap;gap:6px;min-height:0;flex-shrink:0}
+.effect-badges:empty{display:none}
+.effect-badges>span{display:flex;align-items:center;justify-content:center;gap:3px;flex:1;white-space:nowrap;padding:5px 7px;background:#2d354b;border:1px solid #8a83a0;color:#dce2ee;font:10px/1.3 system-ui}
+.effect-badges b{color:#f0d5a0}
+.effect-badges .sprite{width:21px;height:21px;flex-shrink:0}
+#active-effects:has(.effect-badges:empty){display:none}
+.shield-trial-link{font-size:10px;min-height:30px;padding:3px 0;text-align:center;align-self:center;flex-shrink:0}
+.combat-trial .swarm-mob{width:62px;height:62px}
+.combat-trial .swarm-mob>.sprite{width:62px;height:62px}
+.trial-attacker-label{position:absolute;top:calc(35% + 38px);right:6%;color:#ead8b4;background:#142239e6;border:1px solid #7d806e;padding:5px 8px;font:10px/1.4 'Courier New',monospace;max-width:88%;text-align:center}
+.trial-response-count{display:flex;justify-content:space-between;gap:10px;color:#c4d0df;font-size:10px;line-height:1.4;flex-shrink:0}
+.trial-page .swarm-field{min-height:235px}
+.retaliation-bolt{position:absolute;width:18px;height:18px;margin:-9px;z-index:12;pointer-events:none;animation:shield-response .32s ease-in var(--delay,0ms) both;filter:drop-shadow(0 0 4px #ffc785)}
+.retaliation-bolt>.sprite{width:18px;height:18px}
+.response-label{position:absolute;bottom:34px;left:10px;right:10px;color:#ffe3ad;font:10px/1.4 'Courier New',monospace;background:#17253eea;border:1px solid #b1986d;padding:6px;text-align:center;z-index:8;pointer-events:none}
+.fight-arena>.effect-badges{position:absolute;top:42px;left:8px;right:8px;z-index:8;pointer-events:none}
+.fight-mage .mage-barrier{inset:-6px}
+.scene.has-ward .mage::after{content:'';position:absolute;inset:-4px;border:2px solid #b5e6ff99;border-radius:45%;box-shadow:0 0 12px #8edcff44}
+.scene.shield-empowered .mage{filter:drop-shadow(0 0 6px #bd9bff88)}
+@keyframes shield-response{0%{opacity:1;transform:scale(.6)}100%{left:var(--tx);top:var(--ty);opacity:1;transform:scale(1)}}
+@media(max-width:360px){.effect-badges>span{font-size:9px;padding:4px 5px}.effect-badges .sprite{width:19px;height:19px}.trial-page .swarm-field{min-height:220px}.trial-attacker-label{font-size:9px;right:4%}.trial-response-count{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.retaliation-bolt,.incoming-bolt{display:none}.swarm-mage.shield-empowered{filter:none}.mage-barrier{box-shadow:none}}
+/* Nested raster compositions keep their own proportions inside any icon-sized host. */
+.support-art .shield-flame>.sprite,.cone-art .cone-ray>.sprite{width:100%;height:100%}
