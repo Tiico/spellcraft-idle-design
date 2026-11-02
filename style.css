@@ -630,7 +630,7 @@ dd {
     color:var(--gold);
 }
 .analysis[open] summary:after {
-    content:'−';
+    content:'ÔêÆ';
 }
 .analysis summary .muted {
     margin-left:auto;

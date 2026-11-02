@@ -2,7 +2,7 @@
 (function(scope){
     const routes=[
         {name:'Fire',places:[['emberwood','Emberwood','portal'],['cinder-crossing','Cinder Crossing','pond'],['ashen-ruins','Ashen Ruins','workshop']],boss:['sentinel-keep','Sentinel Keep','The Ember Sentinel']},
-        {name:'Ice',places:[['hushed-glacier','Hushed Glacier','portal'],['frostfall-lake','Frostfall Lake','pond'],['crystal-pass','Crystal Pass','mine'],['winter-spire','Winter Spire','workshop']],boss:['wardens-crown',"Warden’s Crown",'The Glacier Warden']},
+        {name:'Ice',places:[['hushed-glacier','Hushed Glacier','portal'],['frostfall-lake','Frostfall Lake','pond'],['crystal-pass','Crystal Pass','mine'],['winter-spire','Winter Spire','workshop']],boss:['wardens-crown',"WardenÔÇÖs Crown",'The Glacier Warden']},
         {name:'Earth',places:[['verdant-hollow','Verdant Hollow','portal'],['mossroot-grove','Mossroot Grove','moth'],['stonevein-quarry','Stonevein Quarry','mine'],['tangled-ruins','Tangled Ruins','workshop'],['rootbound-gate','Rootbound Gate','portal']],boss:['colossus-heart','Colossus Heart','The Root Colossus']},
         {name:'Wind',places:[['skyreach','Skyreach','portal'],['gale-bridges','Gale Bridges','pond'],['stormwatch','Stormwatch','workshop']],boss:['tempest-shrine','Tempest Shrine','The Sky Keeper']}
     ].map(r=>Object.freeze({...r,places:Object.freeze(r.places.map(([id,name,art])=>Object.freeze({id,name,art}))),boss:Object.freeze({id:r.boss[0],name:r.boss[1],guardian:r.boss[2]})}));

@@ -74,7 +74,7 @@ export function normalizeWorkspace(value) {
             !/^[a-z][a-z0-9-]{0,47}$/.test(source.id)) throw new Error('Spell IDs must be unique lowercase names, up to 48 characters.');
         for (const [field, max] of [['name',80], ['role',600], ['symbol',4]]) {
             if (typeof source[field] !== 'string' || !source[field].trim() || source[field].length > max) {
-                throw new Error(`Invalid ${field} for ${source.id} (1–${max} characters required).`);
+                throw new Error(`Invalid ${field} for ${source.id} (1ÔÇô${max} characters required).`);
             }
         }
         if (typeof source.color !== 'string' || !/^#[0-9a-f]{6}$/i.test(source.color)) {
