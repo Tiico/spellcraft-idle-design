@@ -21,7 +21,9 @@
         const production=d.kind==='time'&&validRates?Object.fromEntries(rateKeys.map(k=>[k,Math.floor(rates[k]*d.value*count)])):null;
         const unitPrice=d.kind==='time'?Math.max(d.price,validRates?Math.ceil((rates.ore+rates.pearls*2+rates.shards*2)*d.value*2):d.price):d.price;
         const total=action==='buy'?unitPrice*count:action==='sell'?d.sell*count:0,stock=data.stocks[key]||0,seconds=d.kind==='time'?d.value*60*count:0;
+        if(production&&player.ventureDevelopment&&root.MageVentureDevelopment)production.materials=root.MageVentureDevelopment.preview(player.ventureDevelopment,rates,d.value*count*60);
         let reason=null;
+        if(production?.materials&&Object.entries(production.materials).some(([id,n])=>!Number.isFinite(player.ventureDevelopment.stock[id]+n)))reason='Invalid material balance';
         if(action==='buy'&&player.ore<total)reason='Not enough Ore';
         if(action!=='buy'&&stock<count)reason='Not enough items';
         if(action==='open'&&d.kind!=='chest'||action==='use'&&d.kind==='chest')reason='Choose a valid action';
@@ -41,7 +43,7 @@
         const receipt={id,signature,action,key,count,rarity:d.rarity,total:q.total,gains,converted,production:action==='use'?q.production:null,seconds:action==='use'?q.seconds:0,focusSeconds:q.focusSeconds,echoCharges:q.echoCharges};
         data.stocks[key]+=(action==='buy'?count:-count);if(action==='buy')player.ore-=q.total;if(action==='sell')player.ore+=q.total;
         if(action==='open'){Object.assign(data.ranks,changes);player.ore+=converted*5;}
-        if(action==='use'&&d.kind==='time'){player.seconds+=q.seconds;player.ore+=q.production.ore;player.pearls+=q.production.pearls;player.shards[player.realm]+=q.production.shards;}
+        if(action==='use'&&d.kind==='time'){player.seconds+=q.seconds;player.ore+=q.production.ore;player.pearls+=q.production.pearls;player.shards[player.realm]+=q.production.shards;if(q.production.materials)root.MageVentureDevelopment.credit(player.ventureDevelopment,q.production.materials); }
         if(action==='use'&&d.kind==='focus')data.focusUntil=Math.max(now,data.focusUntil)+q.focusSeconds*1000;
         if(action==='use'&&d.kind==='echo')data.echoCharges+=q.echoCharges;
         data.receipts.push(receipt);return {ok:true,duplicate:false,receipt};
