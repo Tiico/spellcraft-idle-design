@@ -1,0 +1,31 @@
+/* The selected floating launcher stays; the idle build is part of the world. */
+.scene-loadout{position:absolute;left:12px;bottom:28px;width:min(280px,calc(100% - 24px));margin:0!important;min-height:48px;padding:4px 6px;background:#16233de8;border:1px solid #8b8d83;box-shadow:0 3px #0b1425aa;gap:6px;z-index:6}
+.scene-loadout .spell-icon{width:36px;height:36px}.scene-loadout .edit-build{width:44px;height:44px;min-width:44px;min-height:44px;flex-shrink:0}
+.scene .cast-caption{bottom:89px}.scene .loot-label{bottom:116px}
+.dungeon-page,.dungeon-detail,.dungeon-result{display:flex;flex-direction:column;gap:8px;height:100%;min-height:min-content}
+.dungeon-page .page-heading{margin-bottom:0}
+.dungeon-daily-heading{display:flex;justify-content:space-between;align-items:center;min-height:30px;font-size:12px;color:#c4d0dc}
+.dungeon-daily-heading .info-button{height:32px;min-height:32px}
+.dungeon-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.dungeon-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;position:relative;min-height:148px;min-width:0;padding:8px 5px;background:linear-gradient(#354259,#233148);border:1px solid #8b8c83;box-shadow:inset 2px 2px #536077,inset -2px -2px #172237;color:#eddcb9}
+.dungeon-card>.sprite{width:42px;height:42px}.dungeon-card>strong{font:700 12px/1.25 'Courier New',monospace;text-align:center;min-height:30px;display:flex;align-items:center;justify-content:center}
+.dungeon-yield{display:flex;align-items:center;justify-content:center;gap:4px;min-height:25px}.dungeon-yield .sprite,.dungeon-yield .ui-icon{width:23px;height:23px}.dungeon-yield b{font:700 16px 'Courier New',monospace;color:#f1d393}
+.dungeon-card>small{font-size:11px;color:#c4cfdd;text-align:center;line-height:1.25}
+.dungeon-card-quota{display:flex;align-items:center;justify-content:center;gap:7px;color:#c4d8b6;font:10px 'Courier New',monospace;min-height:17px}
+.daily-pips{display:inline-flex;align-items:center;gap:5px;vertical-align:middle}.daily-pips i{display:block;width:9px;height:9px;transform:rotate(45deg);background:#273149;border:1px solid #7f8b9e}.daily-pips i.available{background:#d1b271;border-color:#f3d798;box-shadow:0 0 5px #dabc7522}
+.dungeon-card.depleted{background:linear-gradient(#29364b,#202c41);border-color:#53657e}.dungeon-card.depleted>.sprite{filter:saturate(.4);opacity:.65}
+.dungeon-reset{display:flex;align-items:center;justify-content:center;gap:3px;min-height:24px;font-size:11px;color:#c0ccdb;flex-shrink:0}
+.dungeon-page>.dungeon-reset{margin-top:auto;margin-right:64px;margin-bottom:8px}
+.dungeon-hero{display:flex;align-items:center;justify-content:center;gap:10px}.dungeon-hero>.sprite{width:78px;height:78px}.dungeon-hero h2{font:700 21px/1.25 'Courier New',monospace;color:#f0d8a5;margin:0;max-width:190px}
+.dungeon-reward-preview{display:flex;align-items:center;justify-content:center;gap:8px;background:#2b3b49;border:1px solid #7f8d83;padding:10px;color:#ead4a2;flex-wrap:wrap}
+.dungeon-reward-preview>.sprite,.dungeon-reward-preview>.ui-icon{width:38px;height:38px}.dungeon-reward-preview>b{font:700 25px 'Courier New',monospace}.dungeon-reward-preview>span:not(.sprite):not(.ui-icon){font-size:12px;color:#d1d9e4}
+.dungeon-rules-row{display:flex;align-items:center;justify-content:space-between;gap:7px;border-block:1px solid #4f6078;min-height:37px;color:#c6d3e1;font-size:12px}
+.dungeon-rules-row>span:last-child{white-space:nowrap}
+.dungeon-elements{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.dungeon-elements button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;background:#26344b;border:1px solid #728098;color:#c5d2df;padding:4px;font-size:11px}.dungeon-elements button[aria-pressed=true]{border-color:#e6c17f;background:#49463d;color:#f3d79f}.dungeon-elements .ui-icon{width:25px;height:25px}
+.familiar-goal{display:flex;align-items:center;gap:10px;background:#2b344b;border:1px solid #788399;padding:8px}.familiar-goal>.sprite{width:52px;height:52px}.familiar-goal>div{flex:1;min-width:0}.familiar-goal strong{display:block;font-size:12px}.familiar-goal span{font-size:11px;color:#c7d2e0}.familiar-goal .progress-track{margin:6px 0 0}
+.dungeon-detail>.primary-dock{padding-top:4px}.dungeon-detail>.dungeon-reset{margin-right:64px;font-size:10px}
+.dungeon-result{align-items:center;justify-content:center;gap:9px}.dungeon-result .result-art{width:76px;height:76px;margin:4px auto}.dungeon-result .page-heading{margin:0}.dungeon-result-reward{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;width:100%;background:#2b3c48;border:1px solid #8c9a7d;padding:14px}
+.dungeon-result-reward>.ui-icon,.dungeon-result-reward>.sprite{width:37px;height:37px}.dungeon-result-reward strong{font:700 26px 'Courier New',monospace;color:#f5d9a0}.dungeon-result-reward>span:last-child{font-size:12px;color:#c9d5df}.dungeon-result .fragment-result{font-size:12px;margin:0;color:#e0c6ee}.dungeon-result .primary-dock{width:calc(100% - 64px);align-self:flex-start;margin-right:64px!important}
+.swarm-tallies>span>.sprite{width:22px;height:22px}
+@media(max-height:720px){.dungeon-page,.dungeon-detail,.dungeon-result{gap:6px}.dungeon-card{min-height:138px;padding:6px 4px;gap:3px}.dungeon-card>.sprite{width:36px;height:36px}.dungeon-hero>.sprite{width:63px;height:63px}.dungeon-hero h2{font-size:19px}.dungeon-reward-preview{padding:8px}.dungeon-detail .row.between{min-height:44px}.dungeon-result-reward{padding:10px}}
+@media(max-width:360px){.scene-loadout{left:10px;width:calc(100% - 20px);max-width:268px;gap:5px}.scene-loadout .spell-icon{width:34px;height:34px}.dungeon-card>strong{font-size:11px}.dungeon-card>small{font-size:10px}.dungeon-hero h2{font-size:18px}.dungeon-rules-row{font-size:11px}.dungeon-elements button{font-size:10px}}
