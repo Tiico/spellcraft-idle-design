@@ -970,3 +970,5 @@ form>label {
 .realm-idle-sources{margin-top:20px;padding:20px}.idle-source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.idle-source-grid article{border:1px dashed #8b7c9e;padding:12px}.idle-source-grid h3{margin-top:0}.idle-source-grid strong{font-size:12px;color:#d2bfe4}.idle-odds-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(65px,1fr));gap:5px}.idle-odds-preview>span{display:flex;flex-direction:column;align-items:center;padding:8px;background:#26374c;border:1px solid #687891}.idle-odds-preview small{font-size:10px;color:#bfcbdc}.idle-odds-preview b{font-size:16px;color:#e7d09a}
 
 #venture-spirit-sources{margin-top:24px;padding:20px;border:1px solid #766b88;background:#20283d}#venture-spirit-sources>p{color:#bac9db;font-size:13px;line-height:1.6}
+
+#loot-gift-sources{margin-top:24px;padding:20px;border:1px solid #89734f;background:#202b3d}#loot-gift-sources p{color:#c3cfdc;font-size:13px;line-height:1.6}
