@@ -1,7 +1,108 @@
 [
   {
-    "version": "0.48.0",
+    "query": "?nav=B&study=discoveryArt",
+    "version": "0.49.0",
+    "id": "ui-pixel-idle-v29",
+    "sourceCommit": "bec5d230496a3793c61f5184fdac642ea8fd9ea1",
+    "files": {
+      "index.html": "970d4684c00ef9e52ee94f36e849cc5ba94070c453f7b335d4540e08c93c99a7",
+      "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
+      "active-play.css": "d1f3528b9cf5576bdcd66258c7761ddc807d3c1366bcb252b5662c3c1cc7da50",
+      "clarity.css": "646dbb5a79324ef0f2985107ac0ffe4d5b9176645940f8a92675dac8ab99fdea",
+      "presentation.js": "c75fd805fc72d6dec36ea04e85977742242e5a05a1780943e45b3260a0a43565",
+      "support-model.js": "89d9ec67111de58c2764bb0a46accc311a1dbc7dc15a169f44cd9e016a0b0116",
+      "activity-model.js": "8c04a63ef85962741c977dfa6b363f6b6eeebe6f6cbf06dfd665863690215491",
+      "active-play.js": "21b0f2d8d7886acaf06bfc5b1ed1e7de44e075a2827a1a2622240ca164ceb57d",
+      "swarm-boss.js": "6a43520ce9c4e1b4f04573797b81b6cd29fdd532f10e862a808388a06e309ff9",
+      "prototype.js": "8123a541de4f57c41958c95df8b28b20efe1b0971ad78439da1650e4db85159e",
+      "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322",
+      "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
+      "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
+      "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e",
+      "rarity-model.js": "e5b958fea6924b1086d3244c4fc52df0c81d390794b9f663d3da1ff5404cf2e9",
+      "navigation.js": "3e812234fc8f33cc758731d117d4529c7f7c8201c87deb2574d66d57701eff1b",
+      "navigation-rarity.css": "32320d1efc42f3ca92d3b9b4fdb83cfbcccd4dbce8f2e310761265279fe2dc2f",
+      "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
+      "dungeons.js": "40fa104d13ebc2a2dd76f3bb2642a2047741d2a3d5d271582c04053d1d9fc11a",
+      "dungeons.css": "f21c5dd575a6a32bd21945f9628ca2838e179b4d333d9707b6dd1141bc09449f",
+      "realm-model.js": "72649a82e83c438e93457d0d3b96b5ee91fa8a7fd2296723c1cacbee0105920c",
+      "world-map.js": "ce129f6bcf98eaec272600bd62d3b68c1d4bb7f0df7f29fad1959152bb580389",
+      "world-map.css": "2a7c1cd14183b01122158d10296fc110d2ca3cdf377cbe00741923454d57df59",
+      "idle-spells-model.js": "12e771c0e69341aa96e03f82f7468d955577302f10a25a965310dd6cd8a862b3",
+      "realm-discoveries.js": "a1ba467a1cbfb978dc3003eb9d17cafa8a59550b37b80c434f64ab2198b4365a",
+      "realm-discoveries.css": "018230d4aa610ebd78608564c963fda9fd2a2a818fc75ce6c5b855e47e926403",
+      "realm-progression.js": "95660e2bd7b1c47c62fa43f76c608b821040e3c6021b5cd873c9d1d644a29aca",
+      "realm-progression.css": "9c939f00d75a36d410c46ace65e8ec44450893b8e41aa87dd21c0356dd9fcf15",
+      "realm-map-study.js": "82136ead78403ec63358a709e93b7d474d15508b04d9e8435dde96b0d03249c8",
+      "realm-map-study.css": "e27fb9216003d585416d20098c0a86564e73b12a13a0ed09aac7972aa01d55dc",
+      "venture-spirits-model.js": "7a418826149acd61e76050c5c66bae5cbd4d2c3b1b942647612f038bcb108d94",
+      "shop-model.js": "90758265a6053856e80c96078b7e7d22359b22b6b638b3ac2994f98202ba4efb",
+      "encounter-art.js": "ccee2c957da4266d55d57c6147ac20a7c2a45ceff5ad5e5d759a779aa7e59ae6",
+      "venture-shop-ui.js": "ba4041bf2b9fa8adb4b7da5e70eab593a51c820a212dddc89788b7886a7ba2c0",
+      "venture-shop.css": "95cfec122869fc89737b2228dac054dedebcf08f87513886611539c154a6a41c",
+      "assets/roster-v18/boss-knight.png": "696248f713bc44c28a621fb9b822d01e634f0cbe601b1740970e9f5445f2cb74",
+      "assets/roster-v18/boss-sentinel.png": "2b3029c78ff04baf02f98a26e293d94a2542b385ab3435fa4d9c29ed1334e540",
+      "assets/roster-v18/boss-warden.png": "f195f56ccb6a16a3afaef2d1d91986652fa8311b5669989546b437d1eedb78db",
+      "assets/roster-v18/boss-watcher.png": "75752228e7eef7ba5dda46c8565b1208998803f35592669976b0fa4b9675f0b9",
+      "assets/roster-v18/mob-basilisk.png": "3c04568ee6b336ec4ce119bada6827dfa77d3c387e25f7f314b3f37debc95aac",
+      "assets/roster-v18/mob-bat.png": "0b6350144271af033e67f0bce14a663f6fee8fb9b46b9fdd178eaae475d98520",
+      "assets/roster-v18/mob-beetle.png": "ad2b3485f2320a633bed68aff05b2baf8a3456ce15c09cb08503fc0e64e15196",
+      "assets/roster-v18/mob-imp.png": "303a5f3b7c36fc45d1dad2cb2037eef14ab23e72675ede0d66ab3c9bfc39a5e9",
+      "assets/roster-v18/mob-slime.png": "1868babefc1715119af37fde8db0df3c3ee39f5be9994c1afbaab34f18ced498",
+      "assets/roster-v18/spirit-delver.png": "17e615b5657b60559203a19939d476497bb0c3b4635a8a616d10400077dab7f8",
+      "assets/roster-v18/spirit-echo.png": "acc6eeb108d83b32a9d641ade2c0bab73c4329b8d5f491b416092cd2fad2cde0",
+      "assets/roster-v18/spirit-weaver.png": "de01b14b37db6f246618eead2becb9582d08000c0548e19192bfad2308c35bb5",
+      "item-loot-model.js": "c233c2e3a5968983dd93d3d9da9a2d5e8f38fb59dcd03b44dfda0a84c6959b47",
+      "frontier-model.js": "25567cfd825c3b9c099b732d6e12d93d6f445adf282a1e1d3457d0790b19c419",
+      "free-gifts-model.js": "d46cf7c9241c9d87ff0b342b5d1a8f221ea7ceb70610999a9079e5577b858dd7",
+      "ground-loot.js": "df0e23b90e2df8ff0d1f69fe2bb5a9f3e9735075f0d1b1982c7ec1f30c5fa39d",
+      "shop-gifts.js": "31e00bd6f498ea3514b94992c7205f37bbc256236faaf871657c86224cc6d320",
+      "shop-loot.css": "0c1d298c205ad552368d2b1b450307ac0276df9d2ac16694f63783855ee21f03",
+      "assets/gifts-v19/chest-closed.png": "92ecdbf5f82fcd15de7a40514806902ffa078fd67e9cc55519fd2751d1f25ca9",
+      "assets/gifts-v19/chest-open.png": "7a8a1ce771bb6acce3783582ea9f114c70f8d94ea903fd3097335fb6a1cb888d",
+      "chest-rarity.css": "933c0cf294bd75eefd0ba25ce1f244e3afbb25e2fa0003a5b3d61f81852b14f3",
+      "assets/chests-v20/common.png": "2e0f775056170f503c24686dde3b808241c8662d7404a1c12e35a0ca2138ce64",
+      "assets/chests-v20/uncommon.png": "cbb56730ded4b3343b9a5deed2befe26a8f9e33d2f22a094b95a89c4b12e0810",
+      "assets/chests-v20/rare.png": "3ced5e01b2dacb1575bbf429db8e58b354ea690bca0965db903ba03158a352b9",
+      "assets/chests-v20/epic.png": "72bd22813bb7a7ccaeac8170619b413344e020c5b99c4324f24505c37cbee1b5",
+      "assets/chests-v20/legendary.png": "b9493de08d1f6ec96043c4b79bafafeae7f5d08e65e9cee057d4c96e3fa5a5d7",
+      "relic-inventory-model.js": "6fcdc3c691942aaeb2b6c3b8aeb78abdf8fbfa0abfbb9fb3e01a5d862eacdab2",
+      "relic-inventory-ui.js": "5bc3a3976bd0bc852e914124341d3aad9636ee9f5b6ead86a6f0bbfba4696f79",
+      "relic-inventory.css": "c554a2e9add25cd2bcf0a6b6dea03459928eca57f04a34f95663ed79adc5f592",
+      "assets/items-v21/time-scroll.png": "3035e6b182d85e943350bc24388cee34be1dea9720cb43485e4542aabc5ea00b",
+      "assets/items-v21/focus-incense.png": "8450351a3caec68b1696f8fd49e6c0fe3b147b5444fa1c533b4a3881be7e495b",
+      "assets/items-v21/echo-sigil.png": "6159718ae33e7035f7612d6ecb3b48e438347004c50d761b3a603e94e34f12b5",
+      "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8",
+      "venture-development-ui.js": "d64833bf89278a3227001a8dc7e3d1a7594647a5db5e72a999b9f6ebc6282702",
+      "venture-development.css": "ee810608ea0aa8c581aadba4ac120d3727c11f5c496e5e92dad24436da6b6ca4",
+      "venture-polish.css": "23bda1d03735045561662edc56570eedc44f8fbf823b37d697df49eb2fff6a14",
+      "assets/ventures-v23/activity-refinery.png": "c16cd3c35c14d2cc20a208f06badbd6ec30c21f69e89ffeac53e40da4787f047",
+      "assets/ventures-v23/activity-sanctuary.png": "6e3ebee185c04f53cbc5dfaad320f5d0a4d72029830aea1068eb954b7ac918f0",
+      "assets/ventures-v23/copper.png": "7c89026d76b3f211b3a08ea22e33a5e1fe9164c47e208dd4f20c61f7634c7c0c",
+      "assets/ventures-v23/glass-eel.png": "f2436e808c88d78e02e6bd6bcab5732c546d3422b629e568616557faed6355dd",
+      "assets/ventures-v23/gold.png": "8c17a9ee86e51215b184b3d2340aa9fffcd727739311377f87892569f3742120",
+      "assets/ventures-v23/mooncarp.png": "4be1db6a1b32e6a10c8a54e0a6243c7cfc064c57823d36b0bf8b9200dadcd4cd",
+      "assets/ventures-v23/platinum.png": "2fc04cf686893e9ac3f1cc9970a28f9af42c467f8dd4d38f8d14ce68fb51ef5c",
+      "assets/ventures-v23/reedfin.png": "72c5d716ec5ddcef87341be7da0ed70a69cf469228318c4853f3c0c495ea2607",
+      "assets/ventures-v23/site-mine.png": "97695980e15f4c70334bf88a8a002866776c293082eea8f6e05e23e772aeb2d0",
+      "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
+      "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
+      "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8",
+      "assets/realm-spells-v29/ashfall.png": "c1622cb04321f8172510b07612a454dc430953074aa4acbf898044432c6678a2",
+      "assets/realm-spells-v29/bramble-snare.png": "eb6c4ef233e7ec94fbe0dfa297168b504cde0386d85482958ef55691cc257952",
+      "assets/realm-spells-v29/flare-javelin.png": "76d5219d6447635d229a1f283daa1a8362f4de7d1a656d7051693526e5e8ea50",
+      "assets/realm-spells-v29/frost-fang.png": "96af5e06c7bfbdf35a87ea04793729fb8c62620577c78577c7746cbd150a6790",
+      "assets/realm-spells-v29/quartz-spike.png": "144f98f947d698411d46b07d05a59ccc9f4f07034b794a8f88a1fa46a6185c71",
+      "assets/realm-spells-v29/rime-nova.png": "b0048074f40b59110abb52e8aaab21e4cf0811e17229fa1ef0df03c9201aa3b1",
+      "assets/realm-spells-v29/squall-blade.png": "7d415d086b7ab722f06ba376bdc227b8ab2111bed5cbab3f718670c395ae280f",
+      "assets/realm-spells-v29/thunder-gust.png": "6bf3e367a914e5c1715edcaaaabdace4e0721723d6e41733b1dbd28e66d33920"
+    }
+  },
+  {
     "query": "?nav=B&progression=A&experience=shop",
+    "version": "0.48.0",
+    "id": "ui-pixel-idle-v28",
+    "sourceCommit": "1b4604f8a73ff691609535313c197c24c9de41b6",
     "files": {
       "index.html": "37957810580f7406e182f22a15458377cebc3b771c4d6be4d0416ad6d5a8bb02",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -86,13 +187,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "1b4604f8a73ff691609535313c197c24c9de41b6",
-    "id": "ui-pixel-idle-v28"
+    }
   },
   {
-    "version": "0.47.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.47.0",
+    "id": "spell-workspace-v18",
+    "sourceCommit": "1b4604f8a73ff691609535313c197c24c9de41b6",
     "files": {
       "index.html": "b632df7fb41db14137470c6535244eca571ac6d7ddfb48c16b8bc6dad5cf1786",
       "style.css": "4d288aa6ceb8c87aab4a5d0faee44885b2ecfc93fa8fa8835dd4633b20545579",
@@ -111,13 +212,13 @@
       "free-gifts-model.js": "d46cf7c9241c9d87ff0b342b5d1a8f221ea7ceb70610999a9079e5577b858dd7",
       "relic-inventory-model.js": "6fcdc3c691942aaeb2b6c3b8aeb78abdf8fbfa0abfbb9fb3e01a5d862eacdab2",
       "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8"
-    },
-    "sourceCommit": "1b4604f8a73ff691609535313c197c24c9de41b6",
-    "id": "spell-workspace-v18"
+    }
   },
   {
-    "version": "0.46.0",
     "query": "?nav=B&study=discoveryPool",
+    "version": "0.46.0",
+    "id": "ui-pixel-idle-v27",
+    "sourceCommit": "c8c2aa76a486392cc762f9fe201b0f3d847de943",
     "files": {
       "index.html": "7b24a85bb265f2886ff0d5152f511fdb86a3dbed5764a5bc6a21588b8593d184",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -201,13 +302,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "c8c2aa76a486392cc762f9fe201b0f3d847de943",
-    "id": "ui-pixel-idle-v27"
+    }
   },
   {
-    "version": "0.45.0",
     "query": "?nav=B&progression=A&journey=route",
+    "version": "0.45.0",
+    "id": "ui-pixel-idle-v26",
+    "sourceCommit": "9d8357f44dd8fd7fddad3a63fc0ff8db38301343",
     "files": {
       "index.html": "7b24a85bb265f2886ff0d5152f511fdb86a3dbed5764a5bc6a21588b8593d184",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -291,13 +392,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "9d8357f44dd8fd7fddad3a63fc0ff8db38301343",
-    "id": "ui-pixel-idle-v26"
+    }
   },
   {
-    "version": "0.44.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.44.0",
+    "id": "spell-workspace-v17",
+    "sourceCommit": "9d8357f44dd8fd7fddad3a63fc0ff8db38301343",
     "files": {
       "index.html": "291a2e3f8147d04a60a5580242e24b5ff293ca994e8bd0502ff732913158cede",
       "style.css": "4d288aa6ceb8c87aab4a5d0faee44885b2ecfc93fa8fa8835dd4633b20545579",
@@ -315,13 +416,13 @@
       "free-gifts-model.js": "2355f2c8282babe5b5bdd4cf3f3c94670fdbb234aa1e588ca7aac2d47798cce6",
       "relic-inventory-model.js": "6fcdc3c691942aaeb2b6c3b8aeb78abdf8fbfa0abfbb9fb3e01a5d862eacdab2",
       "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8"
-    },
-    "sourceCommit": "9d8357f44dd8fd7fddad3a63fc0ff8db38301343",
-    "id": "spell-workspace-v17"
+    }
   },
   {
-    "version": "0.43.0",
     "query": "?nav=B&progression=A&experience=relics",
+    "version": "0.43.0",
+    "id": "ui-pixel-idle-v25",
+    "sourceCommit": "7a628dd877995efdb7c547838484edad9e9e4392",
     "files": {
       "index.html": "7b24a85bb265f2886ff0d5152f511fdb86a3dbed5764a5bc6a21588b8593d184",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -405,13 +506,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "7a628dd877995efdb7c547838484edad9e9e4392",
-    "id": "ui-pixel-idle-v25"
+    }
   },
   {
-    "version": "0.42.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.42.0",
+    "id": "spell-workspace-v16",
+    "sourceCommit": "7a628dd877995efdb7c547838484edad9e9e4392",
     "files": {
       "index.html": "291a2e3f8147d04a60a5580242e24b5ff293ca994e8bd0502ff732913158cede",
       "style.css": "4d288aa6ceb8c87aab4a5d0faee44885b2ecfc93fa8fa8835dd4633b20545579",
@@ -429,13 +530,13 @@
       "free-gifts-model.js": "2355f2c8282babe5b5bdd4cf3f3c94670fdbb234aa1e588ca7aac2d47798cce6",
       "relic-inventory-model.js": "6fcdc3c691942aaeb2b6c3b8aeb78abdf8fbfa0abfbb9fb3e01a5d862eacdab2",
       "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8"
-    },
-    "sourceCommit": "7a628dd877995efdb7c547838484edad9e9e4392",
-    "id": "spell-workspace-v16"
+    }
   },
   {
-    "version": "0.41.0",
     "query": "?nav=B&progression=A&experience=shop",
+    "version": "0.41.0",
+    "id": "ui-pixel-idle-v24",
+    "sourceCommit": "5f2719217787d7d4e989284f6b4e0a3c4fa5089a",
     "files": {
       "index.html": "ddb2ea0a4cbf6d9031e26cb87d1b938980224903d399839ee15cde2856e1e9ed",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -519,13 +620,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "5f2719217787d7d4e989284f6b4e0a3c4fa5089a",
-    "id": "ui-pixel-idle-v24"
+    }
   },
   {
-    "version": "0.40.0",
     "query": "?nav=B&progression=A&experience=ventures",
+    "version": "0.40.0",
+    "id": "ui-pixel-idle-v23",
+    "sourceCommit": "b82b3086d5e6136aed1fa0da9e9be3bb64f79dc3",
     "files": {
       "index.html": "5bbaa558967f072bbdb2aaf3d00b42dfecb5bc6d375dd7eb6f035f81858c1ccc",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -609,13 +710,13 @@
       "assets/ventures-v23/site-pond.png": "ef8e8959ee1ced55fac04886adda52b68d3e63f8e2cb03931d861871a289dfeb",
       "assets/ventures-v23/star-koi.png": "77d282bb1752a516c1a1dddc261c95564b56bc4aeae3d3dbd4b4b6dea6d3a8eb",
       "assets/ventures-v23/tin.png": "19a6cc382c2d16f39f22a39fa598ad01cfc8e6830b7e1237f6a736329d4b78a8"
-    },
-    "sourceCommit": "b82b3086d5e6136aed1fa0da9e9be3bb64f79dc3",
-    "id": "ui-pixel-idle-v23"
+    }
   },
   {
-    "version": "0.39.0",
     "query": "?nav=B&progression=A&experience=ventures",
+    "version": "0.39.0",
+    "id": "ui-pixel-idle-v22",
+    "sourceCommit": "6eb9bd213ad5b2ecfb5023afd5abd22a5a18f938",
     "files": {
       "index.html": "d0371c6ed1fd318815dc9d97cb21fec2b74864e1296769d9cab052c20f7b7dc9",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -686,13 +787,13 @@
       "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8",
       "venture-development-ui.js": "c630fe84b94b15b93955d8ad902984deedaa1146cbc709123f1ad6ad72bb1975",
       "venture-development.css": "ee810608ea0aa8c581aadba4ac120d3727c11f5c496e5e92dad24436da6b6ca4"
-    },
-    "sourceCommit": "6eb9bd213ad5b2ecfb5023afd5abd22a5a18f938",
-    "id": "ui-pixel-idle-v22"
+    }
   },
   {
-    "version": "0.38.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.38.0",
+    "id": "spell-workspace-v15",
+    "sourceCommit": "059063aecbb7b7ba274e2a87e81a19cda40dd2a1",
     "files": {
       "index.html": "291a2e3f8147d04a60a5580242e24b5ff293ca994e8bd0502ff732913158cede",
       "style.css": "4d288aa6ceb8c87aab4a5d0faee44885b2ecfc93fa8fa8835dd4633b20545579",
@@ -710,13 +811,13 @@
       "free-gifts-model.js": "2355f2c8282babe5b5bdd4cf3f3c94670fdbb234aa1e588ca7aac2d47798cce6",
       "relic-inventory-model.js": "90206c42de5a9ec188c52119db574296f97d95f96abd5f3893855a8de855d99e",
       "venture-development-model.js": "3dd1acb1c7b903b52731b164e2ee72372a12f45eae8bf2702f11fcfd84acf8b8"
-    },
-    "sourceCommit": "059063aecbb7b7ba274e2a87e81a19cda40dd2a1",
-    "id": "spell-workspace-v15"
+    }
   },
   {
-    "version": "0.37.0",
     "query": "?nav=B&progression=A&experience=inventory",
+    "version": "0.37.0",
+    "id": "ui-pixel-idle-v21",
+    "sourceCommit": "e3e57264303b828e1cc0f2df54ee4cd8c9b28aed",
     "files": {
       "index.html": "166fc778fd8c0af1421e85a28455c2dc91b6ed636518bc9eb7429fd0f1a2e7ef",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -784,13 +885,13 @@
       "assets/items-v21/time-scroll.png": "3035e6b182d85e943350bc24388cee34be1dea9720cb43485e4542aabc5ea00b",
       "assets/items-v21/focus-incense.png": "8450351a3caec68b1696f8fd49e6c0fe3b147b5444fa1c533b4a3881be7e495b",
       "assets/items-v21/echo-sigil.png": "6159718ae33e7035f7612d6ecb3b48e438347004c50d761b3a603e94e34f12b5"
-    },
-    "sourceCommit": "e3e57264303b828e1cc0f2df54ee4cd8c9b28aed",
-    "id": "ui-pixel-idle-v21"
+    }
   },
   {
-    "version": "0.36.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.36.0",
+    "id": "spell-workspace-v14",
+    "sourceCommit": "e3e57264303b828e1cc0f2df54ee4cd8c9b28aed",
     "files": {
       "index.html": "dc08e3733dad17e32bb850eeec92a82d09706f789f5b59c31a3a15f747fe208f",
       "style.css": "4d288aa6ceb8c87aab4a5d0faee44885b2ecfc93fa8fa8835dd4633b20545579",
@@ -807,13 +908,13 @@
       "item-loot-model.js": "c233c2e3a5968983dd93d3d9da9a2d5e8f38fb59dcd03b44dfda0a84c6959b47",
       "free-gifts-model.js": "2355f2c8282babe5b5bdd4cf3f3c94670fdbb234aa1e588ca7aac2d47798cce6",
       "relic-inventory-model.js": "ba343848b5f7998c9f234329cb79770015e28b7261852602f614048ca23a68c3"
-    },
-    "sourceCommit": "e3e57264303b828e1cc0f2df54ee4cd8c9b28aed",
-    "id": "spell-workspace-v14"
+    }
   },
   {
-    "version": "0.35.0",
     "query": "?nav=B&progression=A&experience=shop",
+    "version": "0.35.0",
+    "id": "ui-pixel-idle-v20",
+    "sourceCommit": "5199ce895d4eeec6383aab8e359c52e2d55e44fd",
     "files": {
       "index.html": "724bc1dfbacd31e7a4187a70bb91faa83837c1d2f15145f305546c8d816daa05",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -875,13 +976,13 @@
       "assets/chests-v20/rare.png": "3ced5e01b2dacb1575bbf429db8e58b354ea690bca0965db903ba03158a352b9",
       "assets/chests-v20/epic.png": "72bd22813bb7a7ccaeac8170619b413344e020c5b99c4324f24505c37cbee1b5",
       "assets/chests-v20/legendary.png": "b9493de08d1f6ec96043c4b79bafafeae7f5d08e65e9cee057d4c96e3fa5a5d7"
-    },
-    "sourceCommit": "5199ce895d4eeec6383aab8e359c52e2d55e44fd",
-    "id": "ui-pixel-idle-v20"
+    }
   },
   {
-    "version": "0.34.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.34.0",
+    "id": "spell-workspace-v13",
+    "sourceCommit": "5199ce895d4eeec6383aab8e359c52e2d55e44fd",
     "files": {
       "index.html": "c963ff96a96bfab820ba03a9a5ddb2248ea96c654c3230ec8ff7012fe2617e77",
       "style.css": "9f8c38be41c89e41b63a6c8f432c8faf04a209a955ba85507f4073148b1951b6",
@@ -897,13 +998,13 @@
       "venture-spirits-model.js": "9a1fbf7a48cf90b7b829b3e02f1d06f4e3efe8a54b9f49de2bc176f7e6cc93a9",
       "item-loot-model.js": "eeab3c6c1bd0ba79ff575c4979a97d9577b1b90f511a0776e846bd19a020f48e",
       "free-gifts-model.js": "2355f2c8282babe5b5bdd4cf3f3c94670fdbb234aa1e588ca7aac2d47798cce6"
-    },
-    "sourceCommit": "5199ce895d4eeec6383aab8e359c52e2d55e44fd",
-    "id": "spell-workspace-v13"
+    }
   },
   {
-    "version": "0.33.0",
     "query": "?nav=B&progression=A&experience=loot",
+    "version": "0.33.0",
+    "id": "ui-pixel-idle-v19",
+    "sourceCommit": "573303e647a6a60022e276decabead9e1fcf2b7e",
     "files": {
       "index.html": "f8a5078d82b83173f09ebf6f6125516af3440a4c0f78d6b27b94ce00aefaccfb",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -959,13 +1060,13 @@
       "shop-loot.css": "a9dba016ae5f74e59a07539f889388aee6288ef00fa8d11f3ddc91510598f1c8",
       "assets/gifts-v19/chest-closed.png": "92ecdbf5f82fcd15de7a40514806902ffa078fd67e9cc55519fd2751d1f25ca9",
       "assets/gifts-v19/chest-open.png": "7a8a1ce771bb6acce3783582ea9f114c70f8d94ea903fd3097335fb6a1cb888d"
-    },
-    "sourceCommit": "573303e647a6a60022e276decabead9e1fcf2b7e",
-    "id": "ui-pixel-idle-v19"
+    }
   },
   {
-    "version": "0.32.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.32.0",
+    "id": "spell-workspace-v12",
+    "sourceCommit": "11195f4179ddd0610dd33dc1529cb12992041e80",
     "files": {
       "index.html": "c963ff96a96bfab820ba03a9a5ddb2248ea96c654c3230ec8ff7012fe2617e77",
       "style.css": "9f8c38be41c89e41b63a6c8f432c8faf04a209a955ba85507f4073148b1951b6",
@@ -981,13 +1082,13 @@
       "venture-spirits-model.js": "9a1fbf7a48cf90b7b829b3e02f1d06f4e3efe8a54b9f49de2bc176f7e6cc93a9",
       "item-loot-model.js": "eeab3c6c1bd0ba79ff575c4979a97d9577b1b90f511a0776e846bd19a020f48e",
       "free-gifts-model.js": "53e2d0118db4f4b1a5abf3a2a1a2bb68f94a5ffd4c93a3d93a1ec0fce0fc1b3a"
-    },
-    "sourceCommit": "11195f4179ddd0610dd33dc1529cb12992041e80",
-    "id": "spell-workspace-v12"
+    }
   },
   {
-    "version": "0.31.0",
     "query": "?nav=B&progression=A&map=B&experience=idle",
+    "version": "0.31.0",
+    "id": "ui-pixel-idle-v18",
+    "sourceCommit": "c9146fc865953f3bf40540c1401d0246dedddf93",
     "files": {
       "index.html": "ea316c3315360112bdfb57f2d0ab49e459f686ca3be798625680e0beb5a3323b",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1036,13 +1137,13 @@
       "assets/roster-v18/spirit-delver.png": "17e615b5657b60559203a19939d476497bb0c3b4635a8a616d10400077dab7f8",
       "assets/roster-v18/spirit-echo.png": "acc6eeb108d83b32a9d641ade2c0bab73c4329b8d5f491b416092cd2fad2cde0",
       "assets/roster-v18/spirit-weaver.png": "de01b14b37db6f246618eead2becb9582d08000c0548e19192bfad2308c35bb5"
-    },
-    "sourceCommit": "c9146fc865953f3bf40540c1401d0246dedddf93",
-    "id": "ui-pixel-idle-v18"
+    }
   },
   {
-    "version": "0.30.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.30.0",
+    "id": "spell-workspace-v11",
+    "sourceCommit": "9e9606a0c04e11a6d96f0f9311e087ab1af1e52f",
     "files": {
       "index.html": "b47b5cc54aeefa98d6eacec70401454e1b45d24b9994600e2b89ed7d940e8343",
       "style.css": "ed9fc83c6b6646896242758072bbe7b3aacde7d09ee09a3e74ad3e933e85a8e8",
@@ -1056,13 +1157,13 @@
       "realm-model.js": "3d55ac52017d82195bf1e52a5f84246aa37d1e0039bd87f0a5b20882df1b19f7",
       "idle-spells-model.js": "07980a888d5c4712dfce86ee114df6a84b1f1ebdb76dbb182b2f6a7f06b1619d",
       "venture-spirits-model.js": "9a1fbf7a48cf90b7b829b3e02f1d06f4e3efe8a54b9f49de2bc176f7e6cc93a9"
-    },
-    "sourceCommit": "9e9606a0c04e11a6d96f0f9311e087ab1af1e52f",
-    "id": "spell-workspace-v11"
+    }
   },
   {
-    "version": "0.29.0",
     "query": "?nav=B&progression=A&map=A&journey=route",
+    "version": "0.29.0",
+    "id": "ui-pixel-idle-v17",
+    "sourceCommit": "4f8076da7152f61985af26a4e3ebee1b63987c34",
     "files": {
       "index.html": "7406ccf546ac3751f31f2fae997d2431dd0bf22a7d9ed71450f10cd9a849e77c",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1094,13 +1195,13 @@
       "realm-progression.css": "9c939f00d75a36d410c46ace65e8ec44450893b8e41aa87dd21c0356dd9fcf15",
       "realm-map-study.js": "34c8c55394ef98d5bde09548e31329c0ce1229699e576649ee144a4b4a2636aa",
       "realm-map-study.css": "474de31a074a4b3745b136c7433dd42f24b9d4f56433590cd610e92936f2998a"
-    },
-    "sourceCommit": "4f8076da7152f61985af26a4e3ebee1b63987c34",
-    "id": "ui-pixel-idle-v17"
+    }
   },
   {
-    "version": "0.28.0",
     "query": "?nav=B&progression=A&journey=route",
+    "version": "0.28.0",
+    "id": "ui-pixel-idle-v16",
+    "sourceCommit": "09d5f33edcd575367c8633fdccfcec7695806fc6",
     "files": {
       "index.html": "9d87c3c7b65dbd675f051feee788ae485ebaff440ccee9184f342c45c8875318",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1130,13 +1231,13 @@
       "realm-discoveries.css": "877353f9732ab0282c6a83903c85b4bb65a2d1bc72f0a4eab08cac5da86c7f0c",
       "realm-progression.js": "b15551d408517fb4aff87e86b865b8dc59b392e65d096818a78dca1545e8e9b1",
       "realm-progression.css": "9c939f00d75a36d410c46ace65e8ec44450893b8e41aa87dd21c0356dd9fcf15"
-    },
-    "sourceCommit": "09d5f33edcd575367c8633fdccfcec7695806fc6",
-    "id": "ui-pixel-idle-v16"
+    }
   },
   {
-    "version": "0.27.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.27.0",
+    "id": "spell-workspace-v10",
+    "sourceCommit": "5ee844cc2c6d56663793dc6e7b592254886e92ba",
     "files": {
       "index.html": "7f0833d8d8d776c5be251469d77c9529a82e5d56465c4562573f161c8bb9e97e",
       "style.css": "01a5e95f677d2b7d509ad077273988a8361d712f672b4fa18b00cf7846da913c",
@@ -1149,13 +1250,13 @@
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
       "realm-model.js": "3d55ac52017d82195bf1e52a5f84246aa37d1e0039bd87f0a5b20882df1b19f7",
       "idle-spells-model.js": "801b3d7b1297511b6a11f79c9540e8ba8c8fe2c21f58895e578cf3f07efb79d9"
-    },
-    "sourceCommit": "5ee844cc2c6d56663793dc6e7b592254886e92ba",
-    "id": "spell-workspace-v10"
+    }
   },
   {
-    "version": "0.26.0",
     "query": "?nav=B&progression=A",
+    "version": "0.26.0",
+    "id": "ui-pixel-idle-v15",
+    "sourceCommit": "9f09d3c4e7a426718335dc88bfc9c9dc23a11d80",
     "files": {
       "index.html": "daf7ced3d570ef4c4849822cd786748e9c841eb90696991aa6f62d64c136a335",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1185,13 +1286,13 @@
       "realm-discoveries.css": "877353f9732ab0282c6a83903c85b4bb65a2d1bc72f0a4eab08cac5da86c7f0c",
       "realm-progression.js": "024f0e1c148778632e9eb1515302d7b89362d1846571e0122ecb02adbc8390da",
       "realm-progression.css": "f52de6a14a72b92e529d643ee9fe1b4c7a4a4a1b6492718c2a10213f42e41a14"
-    },
-    "sourceCommit": "9f09d3c4e7a426718335dc88bfc9c9dc23a11d80",
-    "id": "ui-pixel-idle-v15"
+    }
   },
   {
-    "version": "0.25.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.25.0",
+    "id": "spell-workspace-v9",
+    "sourceCommit": "a71fc07854dfb8de3aa7a7dd17d434024dbbfc5d",
     "files": {
       "index.html": "7f0833d8d8d776c5be251469d77c9529a82e5d56465c4562573f161c8bb9e97e",
       "style.css": "01a5e95f677d2b7d509ad077273988a8361d712f672b4fa18b00cf7846da913c",
@@ -1204,13 +1305,13 @@
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
       "realm-model.js": "e0c8d54c5713ecbf5a7cd526054c5f45405ab9413c31c3bce3fc25a7bbb97d51",
       "idle-spells-model.js": "801b3d7b1297511b6a11f79c9540e8ba8c8fe2c21f58895e578cf3f07efb79d9"
-    },
-    "sourceCommit": "a71fc07854dfb8de3aa7a7dd17d434024dbbfc5d",
-    "id": "spell-workspace-v9"
+    }
   },
   {
-    "version": "0.24.0",
     "query": "?nav=B&study=start",
+    "version": "0.24.0",
+    "id": "ui-pixel-idle-v14",
+    "sourceCommit": "34b4cf705c27b7b15b6fea00c1d8cbbe69aed429",
     "files": {
       "index.html": "120058fb6b8019e1c4bf9d28d106d267380196f8fa821cad6015b3b5494fbf84",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1238,13 +1339,13 @@
       "idle-spells-model.js": "801b3d7b1297511b6a11f79c9540e8ba8c8fe2c21f58895e578cf3f07efb79d9",
       "realm-discoveries.js": "af71ae71f7654bf2793a311a2ee44b82af4c1339e2c18af776f40e9e244a9bb0",
       "realm-discoveries.css": "877353f9732ab0282c6a83903c85b4bb65a2d1bc72f0a4eab08cac5da86c7f0c"
-    },
-    "sourceCommit": "34b4cf705c27b7b15b6fea00c1d8cbbe69aed429",
-    "id": "ui-pixel-idle-v14"
+    }
   },
   {
-    "version": "0.23.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.23.0",
+    "id": "spell-workspace-v8",
+    "sourceCommit": "48d83734f9fe145aa5bac5ec5d1a48e1f799c10f",
     "files": {
       "index.html": "7f0833d8d8d776c5be251469d77c9529a82e5d56465c4562573f161c8bb9e97e",
       "style.css": "01a5e95f677d2b7d509ad077273988a8361d712f672b4fa18b00cf7846da913c",
@@ -1257,13 +1358,13 @@
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
       "realm-model.js": "e0c8d54c5713ecbf5a7cd526054c5f45405ab9413c31c3bce3fc25a7bbb97d51",
       "idle-spells-model.js": "801b3d7b1297511b6a11f79c9540e8ba8c8fe2c21f58895e578cf3f07efb79d9"
-    },
-    "sourceCommit": "48d83734f9fe145aa5bac5ec5d1a48e1f799c10f",
-    "id": "spell-workspace-v8"
+    }
   },
   {
-    "version": "0.22.0",
     "query": "?nav=B&study=start",
+    "version": "0.22.0",
+    "id": "ui-pixel-idle-v13",
+    "sourceCommit": "1601a5d28f2d6ce24c8402034feb82ce5637058a",
     "files": {
       "index.html": "63645d2132cd127348ecdcade819b319ac850799b628d193a75514ee1e1cabf2",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1288,13 +1389,13 @@
       "realm-model.js": "e0c8d54c5713ecbf5a7cd526054c5f45405ab9413c31c3bce3fc25a7bbb97d51",
       "world-map.js": "4b2739ce16a0163e7e995db5ecba8253ec34bbf452f1f1ed1d3d975ba79f8c95",
       "world-map.css": "2a7c1cd14183b01122158d10296fc110d2ca3cdf377cbe00741923454d57df59"
-    },
-    "sourceCommit": "1601a5d28f2d6ce24c8402034feb82ce5637058a",
-    "id": "ui-pixel-idle-v13"
+    }
   },
   {
-    "version": "0.21.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.21.0",
+    "id": "spell-workspace-v7",
+    "sourceCommit": "a3b386c0cb8236c18b518a17abd2fc634de144d5",
     "files": {
       "index.html": "26e51f7b0359bfb73538b82f4840dc30f1fc44537e6665d1ab11c37a9e711181",
       "style.css": "61c1eba45c76de61c99a655b05d820bda00f27f872295ab9f380e87cbde8f4c5",
@@ -1306,13 +1407,13 @@
       "rarity-model.js": "e5b958fea6924b1086d3244c4fc52df0c81d390794b9f663d3da1ff5404cf2e9",
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
       "realm-model.js": "e0c8d54c5713ecbf5a7cd526054c5f45405ab9413c31c3bce3fc25a7bbb97d51"
-    },
-    "sourceCommit": "a3b386c0cb8236c18b518a17abd2fc634de144d5",
-    "id": "spell-workspace-v7"
+    }
   },
   {
-    "version": "0.20.0",
     "query": "?nav=B&study=start",
+    "version": "0.20.0",
+    "id": "ui-pixel-idle-v12",
+    "sourceCommit": "b67ae9f22117c148218c4290513f8710a026a9da",
     "files": {
       "index.html": "dad581de9ae2270ee7ba4c91e91f7d927a6bff4cab97d1c6a818390c5f92df5d",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1334,13 +1435,13 @@
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36",
       "dungeons.js": "1c49b84cd0c9cf6f65bd54b5d773a7269da93b14e514abbf6243e56c707285f4",
       "dungeons.css": "f21c5dd575a6a32bd21945f9628ca2838e179b4d333d9707b6dd1141bc09449f"
-    },
-    "sourceCommit": "b67ae9f22117c148218c4290513f8710a026a9da",
-    "id": "ui-pixel-idle-v12"
+    }
   },
   {
-    "version": "0.19.0",
     "query": "?spell=ice&stage=2&view=map",
+    "version": "0.19.0",
+    "id": "spell-workspace-v6",
+    "sourceCommit": "b67ae9f22117c148218c4290513f8710a026a9da",
     "files": {
       "index.html": "e5001127dfbdd35cb3a0e5008e02846826b7d09687f392ce8ff77fea388f8874",
       "style.css": "36cd64a9153b66e8d7279903e373ad5f4f9b2d83501b572f609d61c4f6fcb26b",
@@ -1351,13 +1452,13 @@
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322",
       "rarity-model.js": "e5b958fea6924b1086d3244c4fc52df0c81d390794b9f663d3da1ff5404cf2e9",
       "dungeon-model.js": "c8ecf1b9f5385372eeb6aff1a7448bc3b0737b7f1c6d2b812414220dd344fd36"
-    },
-    "sourceCommit": "b67ae9f22117c148218c4290513f8710a026a9da",
-    "id": "spell-workspace-v6"
+    }
   },
   {
-    "version": "0.18.0",
     "query": "?nav=A&study=rarity",
+    "version": "0.18.0",
+    "id": "ui-pixel-idle-v11",
+    "sourceCommit": "3aceb8d506fd512d966d774ce3945ee322a73d6e",
     "files": {
       "index.html": "bfc44d17ed08cdb45646685b5ca8cd85dfd017fae04fd1e073bb214001b4f142",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1376,13 +1477,13 @@
       "rarity-model.js": "e5b958fea6924b1086d3244c4fc52df0c81d390794b9f663d3da1ff5404cf2e9",
       "navigation.js": "f6582bdb149bb1040c2ca56cdcbcadf2d56acf1732af848a6cbdd0af811515e4",
       "navigation-rarity.css": "32320d1efc42f3ca92d3b9b4fdb83cfbcccd4dbce8f2e310761265279fe2dc2f"
-    },
-    "sourceCommit": "3aceb8d506fd512d966d774ce3945ee322a73d6e",
-    "id": "ui-pixel-idle-v11"
+    }
   },
   {
-    "version": "0.17.0",
     "query": "?proposal=rarity-risk&spell=frostfire&stage=2&view=map",
+    "version": "0.17.0",
+    "id": "spell-workspace-v5",
+    "sourceCommit": "3aceb8d506fd512d966d774ce3945ee322a73d6e",
     "files": {
       "index.html": "ff6f90f2cc6c7dfba538b38d638b32ffa41f1a2580bcef5d0f696589502d56a7",
       "style.css": "a5f4de67a7539c24b430fe590633d31aebb8ba89ee2dc1b53962b17a648262ea",
@@ -1392,13 +1493,13 @@
       "analysis.mjs": "6b207c42f923ff4e2a6663f44f5c07adaacf5d0cc2929a6f9ffe6da8f74971c8",
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322",
       "rarity-model.js": "e5b958fea6924b1086d3244c4fc52df0c81d390794b9f663d3da1ff5404cf2e9"
-    },
-    "sourceCommit": "3aceb8d506fd512d966d774ce3945ee322a73d6e",
-    "id": "spell-workspace-v5"
+    }
   },
   {
-    "version": "0.16.0",
     "query": "?variant=B&study=shieldSwarm",
+    "version": "0.16.0",
+    "id": "ui-pixel-idle-v10",
+    "sourceCommit": "6b7008ae76edb09228b278a8e12a1ced75f0963c",
     "files": {
       "index.html": "8a8c3c51b0c8841e0b86509b5b923cea47057d8dedf079e801247cc5f38477e2",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1414,13 +1515,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "6b7008ae76edb09228b278a8e12a1ced75f0963c",
-    "id": "ui-pixel-idle-v10"
+    }
   },
   {
-    "version": "0.15.0",
     "query": "?proposal=shield-buff&stage=2&view=map",
+    "version": "0.15.0",
+    "id": "spell-workspace-v4",
+    "sourceCommit": "6b7008ae76edb09228b278a8e12a1ced75f0963c",
     "files": {
       "index.html": "99fcb4cdc401f97427f6ee016f2bbe4730d18cabe355d5e39102ebc4bfddd812",
       "style.css": "5dbdcbcf21e2e32f086716fe8865f72ab6f31b27e4f27b0d4cc0e2b2dc77ee7f",
@@ -1429,13 +1530,13 @@
       "model.mjs": "0284d36d4fac5b9023f8f76aaa8dc44bb3e0d93815a78e501406a4388db9ba4a",
       "analysis.mjs": "6b207c42f923ff4e2a6663f44f5c07adaacf5d0cc2929a6f9ffe6da8f74971c8",
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322"
-    },
-    "sourceCommit": "6b7008ae76edb09228b278a8e12a1ced75f0963c",
-    "id": "spell-workspace-v4"
+    }
   },
   {
-    "version": "0.14.0",
     "query": "?variant=B&study=start",
+    "version": "0.14.0",
+    "id": "ui-pixel-idle-v9",
+    "sourceCommit": "a3c2dec6c8cef6eca1ae6a14193cf957b7ac4afe",
     "files": {
       "index.html": "eed248b358cad88384b58e4da08ae4e871e8eb0685d1ecb5fa9087c755cab2bf",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1451,13 +1552,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "a3c2dec6c8cef6eca1ae6a14193cf957b7ac4afe",
-    "id": "ui-pixel-idle-v9"
+    }
   },
   {
-    "version": "0.13.0",
     "query": "?variant=B&study=buffSwarm",
+    "version": "0.13.0",
+    "id": "ui-pixel-idle-v8",
+    "sourceCommit": "a0b481602f6dc166c1447eb2e3cf7d007cec2350",
     "files": {
       "index.html": "445e90505728ad0de46cfdba113a61a5fa68b8ded65620e5ab97a1483e2d95ef",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1472,13 +1573,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "a0b481602f6dc166c1447eb2e3cf7d007cec2350",
-    "id": "ui-pixel-idle-v8"
+    }
   },
   {
-    "version": "0.12.0",
     "query": "?proposal=shield-buff&stage=2&view=map",
+    "version": "0.12.0",
+    "id": "spell-workspace-v3",
+    "sourceCommit": "a0b481602f6dc166c1447eb2e3cf7d007cec2350",
     "files": {
       "index.html": "99fcb4cdc401f97427f6ee016f2bbe4730d18cabe355d5e39102ebc4bfddd812",
       "style.css": "5dbdcbcf21e2e32f086716fe8865f72ab6f31b27e4f27b0d4cc0e2b2dc77ee7f",
@@ -1487,13 +1588,13 @@
       "model.mjs": "0284d36d4fac5b9023f8f76aaa8dc44bb3e0d93815a78e501406a4388db9ba4a",
       "analysis.mjs": "6b207c42f923ff4e2a6663f44f5c07adaacf5d0cc2929a6f9ffe6da8f74971c8",
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322"
-    },
-    "sourceCommit": "a0b481602f6dc166c1447eb2e3cf7d007cec2350",
-    "id": "spell-workspace-v3"
+    }
   },
   {
-    "version": "0.11.0",
     "query": "?variant=B&view=active",
+    "version": "0.11.0",
+    "id": "ui-pixel-idle-v7",
+    "sourceCommit": "35aabbe65e0d9039a89f085485541177979eb839",
     "files": {
       "index.html": "6a769d7a3039527b2e5acacc7c9d916175fd9bdd187f4b7848d820126d4dac63",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1507,13 +1608,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "35aabbe65e0d9039a89f085485541177979eb839",
-    "id": "ui-pixel-idle-v7"
+    }
   },
   {
-    "version": "0.10.0",
     "query": "?proposal=swarm-cone&stage=3&view=map",
+    "version": "0.10.0",
+    "id": "spell-workspace-v2",
+    "sourceCommit": "35aabbe65e0d9039a89f085485541177979eb839",
     "files": {
       "index.html": "192907dc32663a9e6b085dce989f193f41fdf35b480727cc9b701274090f668c",
       "style.css": "906ab68598b9b0bce7367195e50f3204e2cc0ae33300a5de0ee47408a9df47cd",
@@ -1522,13 +1623,13 @@
       "model.mjs": "0284d36d4fac5b9023f8f76aaa8dc44bb3e0d93815a78e501406a4388db9ba4a",
       "analysis.mjs": "6b207c42f923ff4e2a6663f44f5c07adaacf5d0cc2929a6f9ffe6da8f74971c8",
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322"
-    },
-    "sourceCommit": "35aabbe65e0d9039a89f085485541177979eb839",
-    "id": "spell-workspace-v2"
+    }
   },
   {
-    "version": "0.9.0",
     "query": "?variant=B",
+    "version": "0.9.0",
+    "id": "ui-pixel-idle-v6",
+    "sourceCommit": "d2947321493fdf8abc66d87702bdcc0d8c22d7a5",
     "files": {
       "index.html": "efd3be7d1f7f5155ba52a337d8e1172b206f07ef6f979acba744b48992b60b7e",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1541,13 +1642,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "d2947321493fdf8abc66d87702bdcc0d8c22d7a5",
-    "id": "ui-pixel-idle-v6"
+    }
   },
   {
-    "version": "0.8.0",
     "query": "?variant=B",
+    "version": "0.8.0",
+    "id": "ui-pixel-idle-v5",
+    "sourceCommit": "014efdee442a4b06ffab8ca5000867904fad35a7",
     "files": {
       "index.html": "f5b83ceff86f6b404e1f9e0fed2d301097f5e649fbbe4cbaccbe754c1df02637",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1560,13 +1661,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "014efdee442a4b06ffab8ca5000867904fad35a7",
-    "id": "ui-pixel-idle-v5"
+    }
   },
   {
-    "version": "0.7.0",
     "query": "?variant=B",
+    "version": "0.7.0",
+    "id": "ui-pixel-idle-v4",
+    "sourceCommit": "8b42c90242748fc19a933857759d6de3dbc7b3ae",
     "files": {
       "index.html": "ee95cacb419591e80d39ab0169d3803699107fcb7c3c619a2dc86cf69574b858",
       "prototype.css": "756331e14bdad0e630087a9d7da079482f3f285ca4264d39af8feededdd46b2e",
@@ -1576,13 +1677,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "8b42c90242748fc19a933857759d6de3dbc7b3ae",
-    "id": "ui-pixel-idle-v4"
+    }
   },
   {
-    "version": "0.6.0",
     "query": "?variant=B",
+    "version": "0.6.0",
+    "id": "ui-pixel-idle-v3",
+    "sourceCommit": "1039b300d333c9700ee39a56d8c721143edead50",
     "files": {
       "index.html": "110b384c1bc06765fd60062ba7d03eaca9a6cbba0036408f6c8d2e17ebe487c0",
       "prototype.css": "5a8bf7d0833f61e616a8f64607d466997954f1ef153f89cac83b21202c754fa7",
@@ -1591,13 +1692,13 @@
       "assets/hud-pixel-atlas.png": "49b08d9cc9c63c25930f2d4fc97b47acf1695bb305fa753539c21ffc5cd648f8",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "1039b300d333c9700ee39a56d8c721143edead50",
-    "id": "ui-pixel-idle-v3"
+    }
   },
   {
-    "version": "0.5.0",
     "query": "?variant=A",
+    "version": "0.5.0",
+    "id": "ui-pixel-idle-v2",
+    "sourceCommit": "df8a0822ce95d398e4c5a58b0c3293849317ce04",
     "files": {
       "index.html": "b330345d4af6602d36a7f29bcf7821db591975e42bd4dabfff6d924b82146c8d",
       "prototype.css": "9a93ed199f733174e64817e854c06420c58e8b5bba058aaaafec48075faa813e",
@@ -1605,13 +1706,13 @@
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "df8a0822ce95d398e4c5a58b0c3293849317ce04",
-    "id": "ui-pixel-idle-v2"
+    }
   },
   {
-    "version": "0.4.0",
     "query": "?spell=frostfire&stage=4&view=map",
+    "version": "0.4.0",
+    "id": "spell-workspace-v1",
+    "sourceCommit": "32c2b2e0507aae7a96834c04d94491fde540c583",
     "files": {
       "index.html": "46f56486d1ed880ae97a3034668cc01aced17dc47aa9cbc1844a69bbc3e1f0b4",
       "style.css": "5edc6fd32b0aadfac5fdc33779bc797affd040969b1af5f68fd2b58e0b59f444",
@@ -1620,13 +1721,13 @@
       "model.mjs": "0284d36d4fac5b9023f8f76aaa8dc44bb3e0d93815a78e501406a4388db9ba4a",
       "analysis.mjs": "6b207c42f923ff4e2a6663f44f5c07adaacf5d0cc2929a6f9ffe6da8f74971c8",
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322"
-    },
-    "sourceCommit": "32c2b2e0507aae7a96834c04d94491fde540c583",
-    "id": "spell-workspace-v1"
+    }
   },
   {
-    "version": "0.3.0",
     "query": "?variant=A&art=pixel",
+    "version": "0.3.0",
+    "id": "ui-pixel-idle-v1",
+    "sourceCommit": "dc2fcd15f323b85d30ee280c70af0d887a20a727",
     "files": {
       "index.html": "84b823d830df19cfd06a37e693bc5055ab8541fdbbbfc847e423f656cc71f2b6",
       "prototype.css": "1122b2b4ea9b1dbfe7b51cf45d60fff05f053ff044666a7f2c49941ce3968e54",
@@ -1638,32 +1739,30 @@
       "assets/fantasy-pixel-atlas.png": "c2f67d37103ee06161b096473aa08c3399622fbdb48770ea4615c92f8fd7f322",
       "assets/idle-clearing-pixel.png": "2947ec32d38bb0d2f3059f9297e8195eb2cee15f02cee0549fa823379421a31d",
       "assets/other-realms-pixel.png": "5fe8d0ab6d8b8d6da39511b92a23049cb7c0da5a22e70eac6d971966d9210c8e"
-    },
-    "sourceCommit": "dc2fcd15f323b85d30ee280c70af0d887a20a727",
-    "id": "ui-pixel-idle-v1"
+    }
   },
   {
-    "version": "0.2.0",
     "query": "?variant=A&art=fantasy",
+    "version": "0.2.0",
+    "id": "ui-painted-v1",
+    "sourceCommit": "e82a49da711cbc6c020210b48cb8ae5a539e6d3d",
     "files": {
       "index.html": "3cc013337ae156b41d934ce06d1c8ec61b7289ad84b353423366068e7aa5e8e6",
       "prototype.css": "1122b2b4ea9b1dbfe7b51cf45d60fff05f053ff044666a7f2c49941ce3968e54",
       "prototype.js": "24032e012b50141c3379b2afcd78b6795fe3dc1198c122f68bf25c0596d36fb3",
       "fantasy.css": "1d2c63754b4741de2946ce9212befa4668ce4830323ad8e506fdf1684d4e8641",
       "assets/hushed-glacier-fantasy.png": "34567658e4d286b60634951761595bf22e7470befa3352928f0f15704b28b7a6"
-    },
-    "sourceCommit": "e82a49da711cbc6c020210b48cb8ae5a539e6d3d",
-    "id": "ui-painted-v1"
+    }
   },
   {
-    "version": "0.1.0",
     "query": "?variant=A",
+    "version": "0.1.0",
+    "id": "ui-layouts-v1",
+    "sourceCommit": "d02da6b6ca92e12756c40b26dd6e1dca303db2f0",
     "files": {
       "index.html": "3f2bd8e6fb4334c33b35ab445683f26a997013162890742ee22eb93909014f82",
       "prototype.css": "1122b2b4ea9b1dbfe7b51cf45d60fff05f053ff044666a7f2c49941ce3968e54",
       "prototype.js": "11614b4f5b71b293450f632c5ade15b345634541682b419ac8853de8bf82547b"
-    },
-    "sourceCommit": "d02da6b6ca92e12756c40b26dd6e1dca303db2f0",
-    "id": "ui-layouts-v1"
+    }
   }
 ]
