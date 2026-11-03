@@ -1,0 +1,99 @@
+/* Spatial swarm study. Prototype values, explicit time, no authoritative progression. */
+(function(scope){
+    const patterns={Firebolt:{shape:'bolt'},Icebolt:{shape:'bolt'},'Frostfire Bolt':{shape:'burst',radius:8},'Flame Cone':{shape:'cone',angle:.46,range:86},'Frostfire Cone':{shape:'cone',angle:.68,range:100}};
+    for(const d of MageIdleSpells.definitions)patterns[d.name]=d.pattern;
+    function spawn(count,seed=0,kind='mob'){
+        return Array.from({length:count},(_,i)=>{const n=seed+i,cluster=n%6,col=cluster%3,row=Math.floor(cluster/3);const x=19+col*30+Math.sin(n*2.7)*12,y=27+row*20+Math.cos(n*1.9)*8;return {id:kind+'-'+n,kind,x,y,baseX:x,baseY:y,hp:20,maxHp:20,phase:n*1.7};});
+    }
+    const alive=targets=>targets.filter(m=>m.hp>0);
+    function resolve(targets,{name,aim,origin={x:50,y:91},damage=24,areaScale=1,freeAim=false}){
+        const pattern=patterns[name];
+        if(!pattern||!Number.isFinite(damage)||damage<=0)return {hits:[],killed:0};
+        const validAim=aim&&Number.isFinite(aim.x)&&Number.isFinite(aim.y);
+        const directed=!!(freeAim&&validAim&&pattern.shape!=='bolt');
+        const living=alive(targets);
+        if(!directed&&!living.length)return {hits:[],killed:0};
+        const cursor=validAim?aim:{x:50,y:40};
+        const anchor=directed?null:living.reduce((a,b)=>
+            Math.hypot(a.x-cursor.x,a.y-cursor.y)<=Math.hypot(b.x-cursor.x,b.y-cursor.y)?a:b);
+        const point=directed?cursor:{x:anchor.x,y:anchor.y};
+        const direction=Math.atan2(point.y-origin.y,point.x-origin.x);
+        const chosen=living.filter(m=>{
+            if(pattern.shape==='bolt')return m===anchor;
+            if(pattern.shape==='burst')return Math.hypot(m.x-point.x,m.y-point.y)<=pattern.radius*areaScale;
+            const distance=Math.hypot(m.x-origin.x,m.y-origin.y),angle=Math.atan2(m.y-origin.y,m.x-origin.x);
+            const difference=Math.abs(Math.atan2(Math.sin(angle-direction),Math.cos(angle-direction)));
+            return distance<=pattern.range&&difference<=pattern.angle*areaScale;
+        });
+        const hits=chosen.map(m=>{const dealt=Math.min(m.hp,damage);m.hp=Math.max(0,m.hp-damage);return {id:m.id,x:m.x,y:m.y,damage,dealt,killed:m.hp===0,kind:m.kind};});
+        return {name,origin,shape:pattern.shape,aim:point,directed,direction,angle:(pattern.angle||0)*areaScale,range:pattern.range||0,hits,killed:hits.filter(h=>h.killed).length};
+    }
+    function resolveClearing(targets, {name,aim,origin={x:50,y:91},damage,areaScale,freeAim,now}) {
+        const mobs=alive(targets);
+        const valid=aim&&Number.isFinite(aim.x)&&Number.isFinite(aim.y);
+        const cursor=valid?aim:{x:50,y:40};
+        const directed=!!(freeAim&&valid&&name!=='Frost Fang');
+        if(!mobs.length&&!directed)return {hits:[],killed:0};
+        const anchor=directed?cursor:mobs.reduce((a,b)=>
+            Math.hypot(a.x-cursor.x,a.y-cursor.y)<=Math.hypot(b.x-cursor.x,b.y-cursor.y)?a:b);
+        const point={x:anchor.x,y:anchor.y};
+        const signature=ClearingSignatures.plan(name,{mobs,origin,point,areaScale});
+        const beats=signature.beats.map(({at,targets,scale,root})=>{
+            const hits=targets.filter(mob=>mob.hp>0).map(mob=>{
+                const amount=damage*scale, dealt=Math.min(mob.hp,amount);
+                mob.hp=Math.max(0,mob.hp-amount);
+                if(root){
+                    if(!(mob.rootedUntil>now))mob.rootedAt=now+at;
+                    mob.rootedUntil=Math.max(mob.rootedUntil||0,now+at+root);
+                }
+                return {id:mob.id,x:mob.x,y:mob.y,damage:amount,dealt,killed:mob.hp===0,kind:mob.kind,root};
+            });
+            return {at,hits};
+        });
+        const hits=beats.flatMap(beat=>beat.hits);
+        return {name,origin,shape:'signature',aim:point,directed,beats,cues:signature.cues,
+            hits,killed:hits.filter(hit=>hit.killed).length};
+    }
+    function start({id,realm=0,owned=['Firebolt'],now=0,density=48}){
+        return {id,realm,owned:[...owned],density,cursor:0,lastCast:-Infinity,lastStep:now,effects:MageEffects.create(),events:[],wave:1,serial:density,mobs:spawn(density),casts:0,popped:0,earned:0,claimed:0,nextSpawn:now};
+    }
+    function step(run,now,motion=true){
+        const dt=Math.max(0,Math.min(100,now-run.lastStep));run.lastStep=now;
+        for(const m of motion?alive(run.mobs):[]){if(m.rootedAt<=now&&m.rootedUntil>now)continue;m.phase+=dt*.00025;m.x=m.baseX+Math.sin(m.phase)*2;m.y=m.baseY+Math.cos(m.phase*.8)*1.3;}
+        if(alive(run.mobs).length<=run.density-12&&now>=run.nextSpawn){run.mobs=alive(run.mobs);run.mobs.push(...spawn(12,run.serial));run.serial+=12;run.wave++;run.nextSpawn=now+1100;return true;}
+        return false;
+    }
+    function cast(run,{id,loadout,preview=null,aim,freeAim=false,damageBonus=0,damages,origin,now,cooldownMs=420,areaScale=1,shieldScale=1,echo=false,chain=false}){
+        const build=(preview?[preview]:loadout||[]).filter(name=>run.owned.includes(name)&&(patterns[name]||MageEffects.definitions[name])).slice(0,4);
+        if(!build.length||run.events.includes(id)||now-run.lastCast<cooldownMs)return {accepted:false};
+        const name=build[run.cursor%build.length];
+        const oldShield=run.effects.shield.hp;if(MageEffects.cast(run.effects,name,now)){run.effects.shield.hp=Math.max(oldShield,MageEffects.definitions[name].capacity*shieldScale);run.events.push(id);run.lastCast=now;run.cursor++;run.casts++;run.lastSpell=name;return {accepted:true,name,shape:'support',hits:[],killed:0,earned:0};}
+        const damage=damages?.[name];if(!Number.isFinite(damage)||damage<=0)return {accepted:false};
+        const dealt=(damage+damageBonus)*MageEffects.multiplier(run.effects,now);
+        const signed=ClearingSignatures.supports(name);
+        const result=signed
+            ? resolveClearing(run.mobs,{name,aim,origin,areaScale,freeAim,damage:dealt,now})
+            : resolve(run.mobs,{name,aim,origin,areaScale,freeAim,damage:dealt});
+        if(!result.hits.length&&!result.directed)return {accepted:false};
+        if(result.hits.length&&(echo||chain)){
+            const extra=signed&&!chain
+                ? resolveClearing(run.mobs,{name,aim:result.aim,origin,areaScale,freeAim,damage:dealt,now})
+                : resolve(run.mobs,{name:chain?'Frostfire Bolt':name,aim:result.aim,origin,
+                    areaScale,freeAim,damage:dealt});
+            if(signed&&extra.hits.length){
+                const offset=65;
+                const tail=extra.beats||[{at:150,hits:extra.hits}];
+                result.beats.push(...tail.map(beat=>({...beat,at:beat.at+offset})));
+                result.beats.sort((a,b)=>a.at-b.at);
+                result.cues.push(...(extra.cues||[]).map(cue=>({...cue,at:cue.at+offset})));
+            }
+            result.hits.push(...extra.hits);
+            result.killed+=extra.killed;
+            result.echoed=true;
+        }
+        run.events.push(id);run.lastCast=now;run.cursor++;run.casts++;run.lastSpell=name;run.popped+=result.killed;run.earned=Math.floor(run.popped/8);
+        return {accepted:true,...result,earned:run.earned-run.claimed};
+    }
+    function claim(run,player){const amount=run.earned-run.claimed;if(amount<=0)return 0;run.claimed=run.earned;player.shards[run.realm]+=amount;return amount;}
+    scope.ArcaneActivityModel=Object.freeze({patterns,spawn,alive,resolve,start,step,cast,claim});
+})(globalThis);

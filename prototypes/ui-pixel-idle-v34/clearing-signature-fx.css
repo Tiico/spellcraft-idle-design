@@ -1,0 +1,25 @@
+.clearing-signature-fx {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+.swarm-mob.is-rooted::after {
+    content: '';
+    position: absolute;
+    inset: 45% 8% 5%;
+    border: 2px solid #b0c760;
+    border-radius: 45% 38% 55% 42%;
+    box-shadow: 0 0 0 1px #4d393d, inset 0 -3px #604329;
+    z-index: 3;
+}
+
+.swarm-field[data-active-spell="rimenova"],
+.swarm-field[data-active-spell="frostfang"] { --magic:#8cdbff; }
+.swarm-field[data-active-spell="bramblesnare"] { --magic:#bde185; }
+.swarm-field[data-active-spell="quartzspike"] { --magic:#e1a5cb; }
+.swarm-field[data-active-spell="squallblade"] { --magic:#89f0d3; }
+.swarm-field[data-active-spell="thundergust"] { --magic:#d8c3ff; }
