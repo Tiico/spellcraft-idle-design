@@ -1,0 +1,144 @@
+.ashfall-fx {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    --ashfall-span: 72px;
+    --ashfall-depth: 29px;
+    --ashfall-fall: 34px;
+    --ashfall-gold: #ffd47b;
+    --ashfall-orange: #ff923b;
+}
+
+.ashfall-fx[data-ashfall="active"] {
+    --ashfall-depth: var(--ashfall-span);
+    --ashfall-fall: 56px;
+}
+
+.ashfall-zone {
+    position: absolute;
+    left: var(--ashfall-x);
+    top: var(--ashfall-y);
+    width: var(--ashfall-span);
+    height: var(--ashfall-depth);
+    transform: translate(-50%, -50%);
+}
+
+.ashfall-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px solid #ef994c;
+    border-radius: 50%;
+    background: #f35b1824;
+    box-shadow: 0 0 0 2px #25192eaa, inset 0 0 14px #ff5d2440, 0 0 6px #ff792b66;
+    opacity: .8;
+}
+
+.ashfall-seal {
+    position: absolute;
+    inset: 40% 43%;
+    background: #ffae545e;
+    clip-path: polygon(50% 0, 65% 25%, 100% 50%, 65% 75%, 50% 100%, 35% 75%, 0 50%, 35% 25%);
+}
+
+.ashfall-ember {
+    position: absolute;
+    width: 9px;
+    height: 24px;
+    margin: -12px 0 0 -4px;
+    opacity: 0;
+    animation: ashfall-drop var(--ember-time) cubic-bezier(.48, .05, .86, .62) var(--ember-delay) both;
+    filter: drop-shadow(1px 1px #2c1439) drop-shadow(0 0 5px #ff8d55bb);
+}
+
+.ashfall-ember i {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#4d244b 0 20%, #9a2e3a 20% 40%, #f45129 40% 58%,
+        #ffb54c 58% 72%, #fff1b2 72% 89%, #ffca68 89%);
+    clip-path: polygon(44% 0, 55% 0, 55% 30%, 77% 30%, 77% 55%, 100% 55%, 100% 83%,
+        77% 83%, 77% 100%, 24% 100%, 24% 83%, 0 83%, 0 56%, 23% 56%, 23% 31%, 44% 31%);
+}
+
+.ashfall-fx[data-ashfall="active"] .ashfall-ember { width: 12px; height: 32px; }
+
+.ashfall-fx.is-impact .ashfall-ring { animation: ashfall-afterglow 340ms ease-out both; }
+.ashfall-fx.is-impact .ashfall-seal { animation: ashfall-seal 290ms ease-out both; }
+.ashfall-fx.is-impact .ashfall-ember { animation: none; opacity: 0; }
+
+.ashfall-hit {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: -8px;
+    background: var(--ashfall-gold);
+    clip-path: polygon(38% 0, 62% 0, 62% 32%, 100% 32%, 100% 66%, 62% 66%, 62% 100%,
+        38% 100%, 38% 66%, 0 66%, 0 32%, 38% 32%);
+    animation: ashfall-spark 210ms steps(4, end) both;
+}
+
+@keyframes ashfall-drop {
+    0% { opacity: 0; transform: translateY(calc(-1 * var(--ashfall-fall))) scaleY(.65); }
+    20% { opacity: 1; }
+    100% { opacity: 1; transform: translateY(0) scaleY(1.1); }
+}
+
+@keyframes ashfall-afterglow {
+    0% { opacity: .95; border-color: var(--ashfall-gold); background: #ef73263d; }
+    45% { opacity: .7; border-color: #b46541; background: #ef732619; }
+    100% { opacity: 0; border-color: #71314b; background: transparent; }
+}
+
+@keyframes ashfall-seal {
+    0% { opacity: 1; transform: scale(.9); background: #ffd47b; }
+    100% { opacity: 0; transform: scale(2.4); background: #d95d36; }
+}
+
+@keyframes ashfall-spark {
+    0% { opacity: .85; transform: scale(.65); }
+    100% { opacity: 0; transform: scale(1.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ashfall-fx .ashfall-ember { display: none; }
+    .ashfall-fx .ashfall-ring,
+    .ashfall-fx .ashfall-seal,
+    .ashfall-fx .ashfall-hit { animation: none !important; }
+    .ashfall-fx.is-impact .ashfall-ring { border-color: var(--ashfall-gold); background: #ef73262e; }
+    .ashfall-fx .ashfall-hit { opacity: .45; }
+}
+
+.animation-study .swarm-loot,
+.animation-study .swarm-tallies > span:nth-child(2),
+.animation-study .swarm-build-row > .icon-button {
+    display: none;
+}
+
+.ashfall-cinders {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.ashfall-cinders i {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: 4px;
+    height: 5px;
+    opacity: 0;
+    background: #ffe6a2;
+    box-shadow: 1px 1px #b04b3c, 0 0 5px #ff7939;
+}
+
+.ashfall-fx.is-impact .ashfall-cinders i { animation: ashfall-cinder 300ms steps(6, end) both; }
+
+@keyframes ashfall-cinder {
+    0% { opacity: 1; transform: translate(0, 0); }
+    50% { opacity: .85; background: var(--ashfall-orange); }
+    100% { opacity: 0; transform: translate(var(--cinder-x), var(--cinder-y)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ashfall-cinders { display: none; }
+}
