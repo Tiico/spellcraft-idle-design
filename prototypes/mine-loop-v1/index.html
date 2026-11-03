@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE mine-loop v1: veins with HP, one spirit per vein, upgrade tree, fusion and prestige. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Mage · Mine loop / 1</title>
+    <link rel="stylesheet" href="mine.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ MAGE <small>DESIGN STUDIES / MINE 1</small></a>
+            <p class="eyebrow">GRUVAN · NY MEKANIK</p>
+            <h1>Hugg. Placera.<br>Fusionera.</h1>
+            <p class="intro">Gruvan ersätter de två ventures. Nio veins per djup med egen HP, en spirit per vein som hugger med pickaxe, ett tier-grindat uppgraderingsträd samt fusion och prestige av spirits.</p>
+            <p class="eyebrow">GRANSKA SCENER</p>
+            <div class="scenario-buttons">
+                <button data-scene="start">Start · Första veinen</button>
+                <button data-scene="built">Fem veins · Nya spirits</button>
+                <button data-scene="deep">Djup 2 · Träd & fusion</button>
+                <button data-scene="prestige">Legendary · Prestige</button>
+                <button data-scene="return">Frånvaro · 20 h borta</button>
+            </div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues">Uppgift (länk läggs till vid publicering)</a><br>Slag, drops och kommandon simuleras lokalt. Inget sparas vid omladdning.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / PIXEL IDLE <span>0.55.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Känns loopen rätt?</h2>
+            <p class="fine">Veins har HP som spiriten hugger ner; vid noll betalas yield ut och veinen återställs direkt. Spiritens grundbonus multiplicerar mining power; extra-stats ger speed, yield och crit. Frånvaro räknas som väntevärde med samma 12-timmarstak.</p>
+            <ol class="review-points">
+                <li><strong>Vein-rutnät 3×3 per djup.</strong><p>Nästa vein öppnas av en bossvinst och byggs för föregående material. Djup 2 öppnas när alla nio är byggda.</p></li>
+                <li><strong>En spirit per vein.</strong><p>Byte visar produktionsändringen före handlingen. Tom vein producerar inget.</p></li>
+                <li><strong>Träd med tak 20.</strong><p>Alla uppgraderingar i en tier måste nå 5 innan nästa tier öppnas; kostnaden tas i material från motsvarande djup.</p></li>
+                <li><strong>Fusion och prestige.</strong><p>Två lika spirits ger nästa raritet med summerad bonus och en ny rullad stat. Legendary kan prestigas till Common med allt kvar och en stjärna.</p></li>
+            </ol>
+            <div class="review-actions">
+                <p class="eyebrow">DEMOHANDLINGAR</p>
+                <div class="demo-grid">
+                    <button data-demo="boss">Bossvinst</button>
+                    <button data-demo="drop">Spirit-drop</button>
+                    <button data-demo="away1">Frånvaro +1 h</button>
+                    <button data-demo="away20">Frånvaro +20 h</button>
+                    <button data-demo="materials">+50 av byggda material</button>
+                </div>
+            </div>
+            <details><summary>Prototyptillstånd</summary><pre id="state"></pre></details>
+            <p class="fine"><b>Platshållare:</b> materialnamn, HP, yield, raritetsspann, trädets innehåll och kostnader är granskningsförslag till #25. Spirit-grafiken är återanvänd från roster-v18.</p>
+        </aside>
+    </main>
+    <nav class="scene-bar" aria-label="Byt granskningsscen"><button id="previous" aria-label="Föregående scen">←</button><b id="scene-label"></b><button id="next" aria-label="Nästa scen">→</button></nav>
+    <script src="mine-model.js"></script>
+    <script src="mine-ui.js"></script>
+</body>
+</html>
