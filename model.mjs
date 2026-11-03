@@ -1,19 +1,22 @@
-import { realms, spells, rules, metadata } from './catalog.mjs';
+import { realms, spells, rules, metadata, milestones } from './catalog.mjs';
 
 // Portable, pure simulation model. No DOM, time, persistence or randomness.
+// One boss action is one milestone in `milestones`; the Ice milestone includes the Ice guardian that opens Earth.
 const FusionModel = (() => {
     const find = id => spells.find(s => s.id === id);
-    const fresh = () => ({bosses:0,forge:0,essence:0,shards:[0,0,0,0],owned:['fire'],discovered:[],log:[],notice:'Start with Firebolt. The Fire boss is reachable without a fusion.',error:false});
+    const fresh = () => ({bosses:0,forge:0,essence:0,shards:[0,0,0,0],owned:['fire'],discovered:[],log:[],notice:'Start with Firebolt. The Fire boss on node 6 is reachable without a fusion.',error:false});
+    const rewardNotes = ['', ' +80 proposed essence covers the level 2 upgrade (20) and Frostfire (30).',
+        ' +80 proposed essence; forge level 3 can now be purchased.', ''];
     const finish = (s,notice,error=false) => ({...s,notice,error,log:[notice,...s.log].slice(0,20)});
     const cap = s => rules.forgeCaps[s.bosses];
     function reduce(state,action) {
         const s = {...state,owned:[...state.owned],discovered:[...state.discovered],shards:[...state.shards],log:[...state.log]};
         if(action.type === 'boss') {
-            if(s.bosses === 4) return finish(s,'All four initial realm-guardian milestones are complete. Later tiers continue in the journey prototype.',true);
-            const name = realms[s.bosses++];
+            if(s.bosses === milestones.length) return finish(s,'All four tier 1 boss milestones are complete. Later tiers continue in the journey prototype.',true);
+            const index = s.bosses++;
             if(s.bosses === 1) s.forge = 1;
-            s.essence += rules.bossRewards[s.bosses - 1];
-            return finish(s,`${name} boss victory simulated. ${s.bosses===1?'Ice, forge level 1 and side activities open.':s.bosses===2?'Earth opens. +80 proposed essence covers the level 2 upgrade (20) and Frostfire (30).':s.bosses===3?'Wind opens. +80 proposed essence; forge level 3 can now be purchased.':'Tier 1 guardian milestones are complete. Fire tier 2 opens in the journey model.'}`);
+            s.essence += rules.bossRewards[index];
+            return finish(s,`${milestones[index].name} victory simulated. ${milestones[index].summary}${rewardNotes[index]}`);
         }
         if(action.type === 'farm') {
             const realm = action.realm;
@@ -74,7 +77,7 @@ export function normalizeWorkspace(value) {
             !/^[a-z][a-z0-9-]{0,47}$/.test(source.id)) throw new Error('Spell IDs must be unique lowercase names, up to 48 characters.');
         for (const [field, max] of [['name',80], ['role',600], ['symbol',4]]) {
             if (typeof source[field] !== 'string' || !source[field].trim() || source[field].length > max) {
-                throw new Error(`Invalid ${field} for ${source.id} (1ÔÇô${max} characters required).`);
+                throw new Error(`Invalid ${field} for ${source.id} (1–${max} characters required).`);
             }
         }
         if (typeof source.color !== 'string' || !/^#[0-9a-f]{6}$/i.test(source.color)) {

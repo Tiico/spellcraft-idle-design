@@ -5,7 +5,7 @@
     // The earlier named places name the node sections between bosses; each section ends on its boss node.
     const realms=[
         {name:'Fire',sections:[['emberwood','Emberwood','The Ember Watcher'],['cinder-crossing','Cinder Crossing','The Cinder Warden'],['ashen-ruins','Ashen Ruins','The Ashen Knight'],['sentinel-keep','Sentinel Keep','The Ember Sentinel']]},
-        {name:'Ice',sections:[['hushed-glacier','Hushed Glacier','Ice Watcher'],['frostfall-lake','Frostfall Lake','Ice Warden'],['crystal-pass','Crystal Pass','Ice Knight'],['wardens-crown','WardenÔÇÖs Crown','The Glacier Warden']]},
+        {name:'Ice',sections:[['hushed-glacier','Hushed Glacier','Ice Watcher'],['frostfall-lake','Frostfall Lake','Ice Warden'],['crystal-pass','Crystal Pass','Ice Knight'],['wardens-crown','Warden’s Crown','The Glacier Warden']]},
         {name:'Earth',sections:[['verdant-hollow','Verdant Hollow','Earth Watcher'],['mossroot-grove','Mossroot Grove','Earth Warden'],['stonevein-quarry','Stonevein Quarry','Earth Knight'],['colossus-heart','Colossus Heart','The Root Colossus']]},
         {name:'Wind',sections:[['skyreach','Skyreach','Wind Watcher'],['gale-bridges','Gale Bridges','Wind Warden'],['stormwatch','Stormwatch','Wind Knight'],['tempest-shrine','Tempest Shrine','The Sky Keeper']]}
     ].map(r=>Object.freeze({...r,sections:Object.freeze(r.sections.map(([id,name,boss],i)=>Object.freeze({id,name,boss,from:i?bossNodes[i-1]+1:1,to:bossNodes[i]})))}));

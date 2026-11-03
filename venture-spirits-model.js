@@ -2,9 +2,9 @@
    No time, randomness, network or store entitlements enter these calculations. */
 (function(root){
     const definitions=Object.freeze([
-        {id:'delver',name:'Ember Delver',art:'spirit-delver',rarity:'Rare',ventures:['mine'],work:2,boost:.25,side:1,perk:'+25% Ore ┬À +1 Pearl/min'},
-        {id:'weaver',name:'Mist Weaver',art:'spirit-weaver',rarity:'Epic',ventures:['pond'],work:2,boost:.30,cross:.10,perk:'+30% Pearls ┬À +10% Mine'},
-        {id:'echo',name:'Echo Wisp',art:'spirit-echo',rarity:'Epic',ventures:['mine','pond'],work:2,boost:.20,cross:.10,perk:'+20% here ┬À +10% other venture'}
+        {id:'delver',name:'Ember Delver',art:'spirit-delver',rarity:'Rare',ventures:['mine'],work:2,boost:.25,side:1,perk:'+25% Ore · +1 Pearl/min'},
+        {id:'weaver',name:'Mist Weaver',art:'spirit-weaver',rarity:'Epic',ventures:['pond'],work:2,boost:.30,cross:.10,perk:'+30% Pearls · +10% Mine'},
+        {id:'echo',name:'Echo Wisp',art:'spirit-echo',rarity:'Epic',ventures:['mine','pond'],work:2,boost:.20,cross:.10,perk:'+20% here · +10% other venture'}
     ].map(d=>Object.freeze({...d,ventures:Object.freeze(d.ventures)})));
     const find=id=>definitions.find(d=>d.id===id);
     const fresh=()=>({owned:[{id:'delver-1',kind:'delver',assigned:'mine'},{id:'weaver-1',kind:'weaver',assigned:null},{id:'echo-1',kind:'echo',assigned:null}],receipts:[]});
