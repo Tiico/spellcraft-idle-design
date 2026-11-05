@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE fishing-loop v1: the mage casts from a pier, nets run on the wall clock, fish pay a four-branch skill tree. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Fishing loop / 1</title>
+    <link rel="stylesheet" href="fishing.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / FISHING 1</small></a>
+            <p class="eyebrow">FISKET · ANDRA SIDOSYSSLAN</p>
+            <h1>Kasta. Lägg nät.<br>Lås upp.</h1>
+            <p class="intro">Magikern fiskar från en brygga: håll för att ladda kastet, ett sekundsfönster vid nappet ger bonus. Nät fiskar på väggklocka utan spirits. Fisken betalar ett globalt skill tree med fyra grenar av unika upplåsningar.</p>
+            <p class="eyebrow">GRANSKA SCENER</p>
+            <div class="scenario-buttons">
+                <button data-scene="start">Start · Silver Lake</button>
+                <button data-scene="nets">Tre nät · Tre zoner</button>
+                <button data-scene="tree">Skill tree · Fyra grenar</button>
+                <button data-scene="late">Sent spel · Åtta zoner</button>
+                <button data-scene="return">Återkomst · 30 h borta</button>
+            </div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/214">Uppgift #214</a><br>Kast, nät och kommandon simuleras lokalt. Inget sparas vid omladdning.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / PIXEL IDLE <span>0.56.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Känns fisket och trädet rätt?</h2>
+            <p class="fine">Håll på vattnet för att ladda; hållningen styr fiskens storlek (1/2/3). Vänta på nappet och tryck inom en sekund för +1; missar du får du ändå fisken. Varje kast kostar ett bete som kommer tillbaka var 30:e minut. Nät läggs i zonen du står i och blir klara på väggklocka.</p>
+            <ol class="review-points">
+                <li><strong>Spöt är det aktiva.</strong><p>Servern rullar art och storlek när kastet skickas; klienten rapporterar bara om nappet krokades. Auto-krok finns som tillgänglighetsval.</p></li>
+                <li><strong>Zoner per bossvinst.</strong><p>Tolv vatten med fyra arter var; de öppnas gratis och du växlar fritt efter vad trädet behöver.</p></li>
+                <li><strong>Nät utan spirits.</strong><p>10 min, 1 h, 8 h och 24 h med linjär fångst per timme. En påbörjad cykel blir klar även efter 12 h-taket; inget startar om av sig självt.</p></li>
+                <li><strong>Fyra grenar, binära noder.</strong><p>Fiske, gruva, QoL och spells. Noder kostar konkreta arter, aldrig gems, och ger aldrig HP, Spell power eller procent.</p></li>
+            </ol>
+            <div class="review-actions">
+                <p class="eyebrow">DEMOHANDLINGAR</p>
+                <div class="demo-grid">
+                    <button data-demo="boss">Bossvinst</button>
+                    <button data-demo="fish">+ Fisk från zonen</button>
+                    <button data-demo="skip10">Tid +10 min</button>
+                    <button data-demo="skip1h">Tid +1 h</button>
+                    <button data-demo="skip30h">Borta 30 h</button>
+                    <button data-demo="mage">Byt magiker</button>
+                    <button data-demo="autohook">Auto-krok av/på</button>
+                </div>
+            </div>
+            <details><summary>Prototyptillstånd</summary><pre id="state"></pre></details>
+            <p class="fine"><b>Platshållare:</b> zonnamn, arter, raritetsvikter, nättider, betesiffror, nodlistor och kostnader är granskningsförslag till #25. Fiskarna i Silver Lake är återanvända från ventures-v23; övriga arter, bryggan och magikern är pixelplatshållare i väntan på genererade bilder.</p>
+        </aside>
+    </main>
+    <nav class="scene-bar" aria-label="Byt granskningsscen"><button id="previous" aria-label="Föregående scen">←</button><b id="scene-label"></b><button id="next" aria-label="Nästa scen">→</button></nav>
+    <script src="fishing-model.js"></script>
+    <script src="fishing-ui.js"></script>
+</body>
+</html>
