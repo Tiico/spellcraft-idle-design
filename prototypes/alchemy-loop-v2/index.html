@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE alchemy-loop v1: garden plots with a 5 % harvest window, cauldrons with secret two-ingredient formulas, short potions. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Alchemy loop / 1</title>
+    <link rel="stylesheet" href="alchemy.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / ALCHEMY 1</small></a>
+            <p class="eyebrow">TRÄDGÅRD OCH POTIONS · TREDJE SIDOSYSSLAN</p>
+            <h1>Så. Skörda i tid.<br>Brygg.</h1>
+            <p class="intro">Frön växer på väggklocka i odlingsbädden. Skördefönstret är 5 % av växttiden: i tid ger fyra ingredienser, sent ger gradvis ner till två. En upplåst frösort tar aldrig slut. Två ingredienser bryggs i en kittel enligt hemliga formler, och potions ger korta bonusar i strid, gruva och fiske.</p>
+            <p class="eyebrow">GRANSKA SCENER</p>
+            <div class="scenario-buttons">
+                <button data-scene="start">Start · Första fröet</button>
+                <button data-scene="window">Fönstret är öppet</button>
+                <button data-scene="late">Försenad skörd</button>
+                <button data-scene="brewing">Kittlar och formelbok</button>
+                <button data-scene="return">Återkomst · 30 h borta</button>
+            </div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/271">Uppgift #271</a> · rättar 0.57.0 från <a href="https://github.com/Tiico/spellcraft-idle/issues/268">#268</a><br>Växt, bryggning och kommandon simuleras lokalt. Inget sparas vid omladdning.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / PIXEL IDLE <span>0.58.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Känns trädgården och bryggningen rätt?</h2>
+            <p class="fine">Ringen runt plantan fylls under växten och visar fönstret som ett grönt segment; plantan glöder när fönstret är öppet och ringen blir bärnsten med förlust efter. Magikern vattnar och går till plantan du skördar, utan att det påverkar något.</p>
+            <ol class="review-points">
+                <li><strong>Tolv plantor = element × domän.</strong><p>Fire, Ice, Earth och Wind gånger Combat, Mine och Sea. Växttiden 15 min, 1 h, 4 h eller 12 h är plantans tier. Nya frösorter följer bossvinsterna från bossvinst 8; en upplåst sort kan planteras i hur många platser som helst.</p></li>
+                <li><strong>Exakt två ingredienser, 78 formler.</strong><p>Rena brygder ger plantans signatureffekt, samma domän ger båda effekterna, samma element ger en korsformel, resten blir Murky brew utom fyra specialformler. Hemliga tills bryggda; affiniteterna är ledtrådarna.</p></li>
+                <li><strong>Tiersumma styr tid och styrka.</strong><p>Bryggtid 5 till 60 minuter och styrka 1 till 4. En kittel åt gången, två doser per brygd, töms manuellt; doserna hamnar alltid på potionhyllan.</p></li>
+                <li><strong>Potions utan permanent kraft.</strong><p>Grundduration 3 min, fritt antal olika effekter, samma effekt förlänger upp till tre doser. Realtid för takter, låsning vid start för cykler som nät.</p></li>
+            </ol>
+            <div class="review-actions">
+                <p class="eyebrow">DEMOHANDLINGAR</p>
+                <div class="demo-grid">
+                    <button data-demo="boss">Bossvinst (ny frösort)</button>
+                    <button data-demo="find">Realm-fynd (nästa sort i förtid)</button>
+                    <button data-demo="fish">+ Fisk till trädet</button>
+                    <button data-demo="skip1m">Tid +1 min</button>
+                    <button data-demo="skip10m">Tid +10 min</button>
+                    <button data-demo="skip1h">Tid +1 h</button>
+                    <button data-demo="skip30h">Borta 30 h</button>
+                    <button data-demo="mage">Byt magiker</button>
+                </div>
+            </div>
+            <details><summary>Prototyptillstånd</summary><pre id="state"></pre></details>
+            <p class="fine"><b>Platshållare:</b> plantnamn, växttider, procentvärden per effekt, specialformler, nodlista och frötabell per bossvinst är granskningsförslag till #25. Potions gäller enligt beslutet i boss, övning, idle och rankade event, inte i dungeons. All grafik är pixelplatshållare i inline-SVG i väntan på genererade bilder.</p>
+        </aside>
+    </main>
+    <nav class="scene-bar" aria-label="Byt granskningsscen"><button id="previous" aria-label="Föregående scen">←</button><b id="scene-label"></b><button id="next" aria-label="Nästa scen">→</button></nav>
+    <script src="alchemy-model.js"></script>
+    <script src="alchemy-ui.js"></script>
+</body>
+</html>
