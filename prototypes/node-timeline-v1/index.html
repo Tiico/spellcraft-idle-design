@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE node-timeline v1 (#403): three full-width route timelines that replace the idle view's location plaque. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Node timeline / 1</title>
+    <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / TIMELINE 1</small></a>
+            <p class="eyebrow">IDLE-SIDANS TIDSLINJE · #403</p>
+            <h1>Vägen går<br>för evigt.</h1>
+            <p class="intro">Platsskylten ersätts av en tidslinje i full bredd under headern. Tre varianter, samma spelregler: en kill flyttar en nod, bossen väntar, realms och tiers följer på varandra utan slut.</p>
+            <p class="eyebrow">VARIANT</p>
+            <div class="variant-buttons" role="group" aria-label="Variant">
+                <button data-variant="A"><b>A · Band</b><span>Jämn nodremsa i spelets realmordning, bro för P-01. Ersätter realm map.</span></button>
+                <button data-variant="B"><b>B · Rail</b><span>Tunnelbanelinje i upplåsningsordning som grenar sig vid Fire 6. Öppnar realm map.</span></button>
+                <button data-variant="C"><b>C · Lens</b><span>Avsnittszoom med realmkort per realm och växling. Kompletterar realm map.</span></button>
+            </div>
+            <p class="eyebrow">LÄGE</p>
+            <div class="scenario-buttons" id="scenarios"></div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/403">Uppgift #403</a><br>Reglerna följer RealmRules och innehållskatalogen. Strid, bossförberedelse och servern simuleras. Inga nya bilder: allt är spelets befintliga konst.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / IDLE VIEW <span>0.60.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">DEMO</p>
+            <div class="review-actions">
+                <button data-demo="kill">Kill · nästa nod</button>
+                <button data-demo="win">Vinn den väntande bossen</button>
+                <button data-demo="open">Öppna / stäng tidslinjen</button>
+                <button data-demo="auto" aria-pressed="false">Auto-farm</button>
+                <button data-demo="reduced" aria-pressed="false">Reducerad rörelse</button>
+            </div>
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Vilken tidslinje ska byggas?</h2>
+            <div id="variant-notes"></div>
+        </aside>
+    </main>
+    <nav class="dock" aria-label="Prototype controls">
+        <div class="dock-variants" role="group" aria-label="Variant"><button data-variant="A">A</button><button data-variant="B">B</button><button data-variant="C">C</button></div>
+        <button data-demo="kill">Kill</button>
+        <button data-demo="win">Boss</button>
+        <button data-demo="menu" aria-expanded="false">Läge</button>
+    </nav>
+    <div class="dock-menu" hidden></div>
+    <script src="timeline-model.js"></script>
+    <script src="timeline-ui.js"></script>
+</body>
+</html>
