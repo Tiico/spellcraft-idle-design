@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE boss-mechanics v1 (#374): three playable bosses built from ADR 0015's data-driven building blocks. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Boss mechanics / 1</title>
+    <link rel="stylesheet" href="boss.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / BOSSES 1</small></a>
+            <p class="eyebrow">BOSSMEKANIK · ADR 0015</p>
+            <h1>Läs bossen.<br>Bryt den.</h1>
+            <p class="intro">Fem byggblock i katalogen: faser, sköldar som bryts av en form eller ett element, laddade attacker att avbryta eller undvika, svaga punkter och förstärkningar med beteende. Varje boss är en kombination.</p>
+            <p class="eyebrow">SPELA EN BOSS</p>
+            <div class="scenario-buttons">
+                <button data-scene="watcher">Ember Watcher · laddad attack</button>
+                <button data-scene="warden">Cinder Warden · sköld och faser</button>
+                <button data-scene="knight">Ashen Knight · flank och pyloner</button>
+                <button data-scene="knight-phase2">Ashen Knight · fas 2</button>
+            </div>
+            <p class="eyebrow tier-label">TIER</p>
+            <div class="tier-buttons" role="group" aria-label="Tier">
+                <button data-tier="1">1</button><button data-tier="2">2</button><button data-tier="3">3</button>
+            </div>
+            <p class="fine">Spelbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/374">Uppgift #374</a><br>Striden simuleras lokalt och deterministiskt. Samma loadout i alla tiers: högre tiers kräver ett starkare bygge och visar skalningen.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / PIXEL IDLE <span>0.59.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Blir bossarna roligare att läsa och slå?</h2>
+            <p class="fine">Dra i arenan för att flytta magikern. Alla fyra spells autocastar; tryck på AUTO för att spara en spell och kasta den själv. Rött är fara, guld är bossens svaga punkt, och sköldens märke visar vad som bryter den.</p>
+            <ol class="review-points">
+                <li><strong>Laddad attack: undvik eller avbryt.</strong><p>Gå ur zonen, eller gör avbrottsskadan medan den laddar. Ett avbrott ger stagger: bossen tar full skada och anfaller inte.</p></li>
+                <li><strong>Svag punkt som pansar.</strong><p>Utanför den svaga punkten halverar pansaret skadan; den svaga punkten tar spellens fulla skada, aldrig mer. Serverns gräns ändras då inte.</p></li>
+                <li><strong>Sköld med motmedel.</strong><p>Cinder Ward bryts av area (kon), Ash Ward av Ice; övriga spells gör 25 %. Ingen sköld är immun, så bossen går alltid att slå.</p></li>
+                <li><strong>Förstärkningar med uppgift.</strong><p>Pyloner halverar skadan bossen tar, menders helar den. Bara area-spells når dem, så position och kon spelar roll.</p></li>
+            </ol>
+            <div class="review-actions">
+                <p class="eyebrow">DEMOHANDLINGAR</p>
+                <div class="demo-grid">
+                    <button data-demo="pause">Paus av/på</button>
+                    <button data-demo="restart">Börja om</button>
+                    <button data-demo="half">Bossen till 51 %</button>
+                    <button data-demo="win">Visa resultat och serverkontroll</button>
+                    <button data-demo="reduced">Reducerad rörelse av/på</button>
+                </div>
+            </div>
+            <details><summary>Prototyptillstånd</summary><pre id="state"></pre></details>
+            <p class="fine"><b>Platshållare:</b> HP, skador, tider, pansar och sköldvärden är granskningsförslag till #25. Bossar, imps, magikern och spellikonerna är återanvända bilder; pyloner och menders är platshållare i väntan på bilderna i ADR 0015:s promptlista.</p>
+        </aside>
+    </main>
+    <nav class="scene-bar" aria-label="Byt boss"><button id="previous" aria-label="Föregående boss">←</button><b id="scene-label"></b><button id="next" aria-label="Nästa boss">→</button></nav>
+    <script src="boss-model.js"></script>
+    <script src="boss-ui.js"></script>
+</body>
+</html>
