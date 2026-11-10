@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE circles v1 (#418): loadouts, the boss's spell row, the idle orbs, crest and the ascension ceremony for ADR 0016. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Circles / 1</title>
+    <link rel="stylesheet" href="circles.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / CIRCLES 1</small></a>
+            <p class="eyebrow">MAGIKERNS CIRCLES · ADR 0016 · #418</p>
+            <h1>En slot per<br>circle.</h1>
+            <p class="intro">Magikern börjar som 1-circle mage med en slot och en familiar som kastar själv, och stiger med Mage Power till circle 8. Fyra frågor att välja i: Loadouts, bossens spellrad, idle-scenen och crest med ceremonin.</p>
+            <p class="eyebrow">VY</p>
+            <div class="button-grid" id="screens"></div>
+            <p class="eyebrow">CIRCLE</p>
+            <div class="circle-buttons" id="circles" role="group" aria-label="Circle"></div>
+            <div class="toggles">
+                <button data-toggle="familiar" aria-pressed="true">Familiar på</button>
+                <button data-toggle="ready" aria-pressed="false">Mage Power når nästa tröskel</button>
+                <button data-toggle="reduced" aria-pressed="false">Reducerad rörelse</button>
+            </div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/418">Uppgift #418</a><br>Värdena är platshållare (#25) utom tröskeln för circle 2 (cirka 500). Familiaren och runorna är kodritade platshållare tills PO:s bilder finns (#415).</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / CIRCLES <span>0.61.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">VARIANTER</p>
+            <div id="variants"></div>
+            <p class="eyebrow">DEMO</p>
+            <div class="review-actions">
+                <button data-demo="ceremony">Spela ceremonin</button>
+            </div>
+            <div id="notes"></div>
+        </aside>
+    </main>
+    <nav class="dock" aria-label="Prototype controls">
+        <button data-demo="prev-screen" aria-label="Föregående vy">‹</button>
+        <span class="dock-screen"></span>
+        <button data-demo="next-screen" aria-label="Nästa vy">›</button>
+        <button data-demo="circle-down" aria-label="Lägre circle">C−</button>
+        <button data-demo="circle-up" aria-label="Högre circle">C+</button>
+        <button data-demo="menu" aria-expanded="false">Val</button>
+    </nav>
+    <div class="dock-menu" hidden></div>
+    <script src="circles-model.js"></script>
+    <script src="circles-ui.js"></script>
+</body>
+</html>
