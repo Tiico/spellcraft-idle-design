@@ -1,0 +1,107 @@
+*{box-sizing:border-box}
+:root{font-family:system-ui,sans-serif;color:#efe6cd;background:#0a1012;font-synthesis:none}
+body{margin:0;background:radial-gradient(ellipse at 50% 45%,#16272b,transparent 65%)}
+button,input,select{font:inherit}
+button,a,summary{touch-action:manipulation}
+button{cursor:pointer;color:inherit}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #f3d28a;outline-offset:3px}
+a{color:#e4c58f}
+h1,h2,h3,p{margin-top:0}
+.studio{max-width:1450px;margin:auto;padding:44px 48px 100px;display:grid;grid-template-columns:minmax(230px,1fr) 404px minmax(215px,1fr);gap:62px;align-items:center;min-height:100vh}
+.brief{max-width:310px}
+.wordmark{display:flex;align-items:center;gap:20px;letter-spacing:4px;text-decoration:none;font-size:23px;margin-bottom:48px}
+.wordmark small{font-size:8px;letter-spacing:1px;max-width:90px;color:#93a3ad}
+.eyebrow{font-size:9px;letter-spacing:1.7px;color:#bbab8b;font-weight:650}
+.brief h1{font:44px/1.12 Georgia,serif;letter-spacing:-1.4px;margin:18px 0}
+.intro{font-size:14px;line-height:1.8;color:#aeb9c0}
+.scenario-buttons,.demo-grid{display:grid;gap:7px}
+.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.scenario-buttons button,.review-actions button{background:#1b2a2e;border:1px solid #3a5157;padding:11px;text-align:left;font-size:11px;min-height:40px}
+.time-grid button{text-align:center}
+.scenario-buttons button:hover,.review-actions button:hover{border-color:#c7a66b;background:#233539}
+.scenario-buttons button[aria-current="true"],.time-grid button[aria-current="true"]{border-color:#d7b775;background:#3a3421}
+.fine{font-size:10px;line-height:1.9;color:#96a4b0;margin:20px 0}
+.review h2{font:29px/1.2 Georgia,serif;margin:15px 0 25px}
+.review-points{padding-left:24px;color:#d7bc86}
+.review-points li{padding-left:6px;margin-bottom:18px}
+.review-points strong{font-size:12px;font-weight:550;color:#e8dfca}
+.review-points p{font-size:12px;line-height:1.8;color:#aab7c0;margin-bottom:0}
+.review-actions{border-top:1px solid #3a5157;padding-top:20px}
+.review details{margin-top:18px;font-size:11px}
+.review pre{max-height:260px;overflow:auto;font-size:9px;background:#0b1214;padding:10px;border-radius:6px}
+.device{width:404px;height:858px;border:7px solid #091012;border-radius:36px;overflow:hidden;background:#0c1416;box-shadow:0 0 0 1px #4d6a70,0 25px 90px #0008}
+.device-caption{display:flex;gap:8px;font-size:8px;letter-spacing:1px;margin:18px 8px;color:#92a2b2}
+.device-caption span:first-child{color:#7fe3ee}
+.device-caption span:last-child{margin-left:auto;color:#d4bb86}
+.scene-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:10px;align-items:center;background:#0b1214ee;border:1px solid #3a5157;border-radius:30px;padding:6px 10px;font-size:11px;z-index:5}
+.scene-bar b{min-width:190px;text-align:center;font-weight:550;color:#e8dfca}
+.scene-bar button{background:#1b2a2e;border:1px solid #3a5157;border-radius:50%;width:30px;height:30px}
+
+/* The phone follows the H3 carousel board in the lab design canvas: dark teal, gold and cyan, Cinzel over Spectral. */
+#phone{--bg:#0c1416;--panel:#101b1e;--card:#132024;--line:#2c4146;--muted:#9db0ad;--gold:#d2a24c;--amber:#f0a64a;--cyan:#7fe3ee;--text:#efe7d2;--display:Cinzel,Georgia,serif;
+    position:relative;isolation:isolate;height:100%;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font:15px/1.35 Spectral,Georgia,serif;overflow:hidden;user-select:none;-webkit-user-select:none}
+#phone .top{flex:none;height:70px;padding:26px 20px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}
+#phone .top h1{margin:0;font:700 22px/1 var(--display);letter-spacing:1px;white-space:nowrap}
+#phone .top span{font-size:14px;color:var(--muted);white-space:nowrap}
+#phone .fuel{flex:none;margin:8px 12px 10px;height:50px;padding:0 16px;border:1px solid var(--line);border-radius:25px;background:var(--card);display:flex;align-items:center;gap:10px}
+#phone .fuel b{font-size:14px;font-weight:600;white-space:nowrap}
+#phone .fuel .bar{flex:1;min-width:24px;height:10px;border-radius:5px;background:var(--bg);overflow:hidden}
+#phone .fuel .bar i{display:block;height:10px;border-radius:5px;background:var(--amber)}
+#phone .scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:0 12px 84px;scrollbar-width:thin}
+#phone .panel{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding-bottom:14px}
+#phone .panel svg.machine{display:block;width:100%;height:auto}
+#phone .project{padding:2px 16px 0;display:flex;flex-direction:column;gap:6px}
+#phone .project .row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+#phone .project .name{font:700 16px/1.2 var(--display)}
+#phone .project .effect{font-size:13px;color:var(--muted)}
+#phone .project .pct{font:700 26px/1 var(--display);color:var(--cyan)}
+#phone .project .bar{height:4px;border-radius:2px;background:var(--bg)}
+#phone .project .bar i{display:block;height:4px;border-radius:2px;background:var(--cyan)}
+#phone .project .left{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);min-height:24px}
+#phone .project .pause{border:0;background:none;color:var(--gold);font:600 13px/1 Spectral,Georgia,serif;padding:6px 0 6px 12px;min-height:32px}
+#phone .slots{margin-top:14px;display:flex;flex-direction:column;gap:6px}
+#phone .slot{width:100%;height:48px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);display:flex;align-items:center;justify-content:space-between;gap:10px;font:14px/1.2 Spectral,Georgia,serif;color:var(--text);text-align:left}
+#phone .slot.selected{height:58px;border-color:var(--gold)}
+#phone .slot .label{font-size:12px;color:var(--gold)}
+#phone .slot .what{font-size:15px;font-weight:600}
+#phone .slot .what,#phone .slot>span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#phone .slot .time{color:var(--muted);white-space:nowrap}
+#phone .slot.dashed{border-style:dashed;background:transparent;color:var(--muted)}
+#phone .slot .remove{border:0;background:none;color:var(--gold);font:600 13px Spectral,Georgia,serif;min-height:32px;padding:0 0 0 10px}
+#phone h2{margin:12px 8px 8px;font:600 13px/1 var(--display);letter-spacing:1px;color:var(--muted)}
+#phone .card{min-height:64px;padding:10px 12px 10px 16px;border-radius:14px;background:var(--card);display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+#phone .card .what{min-width:0}
+#phone .card .title{font-size:15px;font-weight:600}
+#phone .card .sub{font-size:13px;color:var(--muted)}
+#phone .card .sub .short{color:#ef9a7f}
+#phone .card .effect{font-size:12px;color:#7d918e}
+#phone .queue{flex:none;height:44px;padding:0 16px;border:1px solid var(--gold);border-radius:22px;background:transparent;color:var(--gold);font:600 14px Spectral,Georgia,serif;white-space:nowrap}
+#phone .queue.resume{background:#2a2412}
+#phone details.done{margin:10px 8px;color:var(--muted);font-size:13px}
+#phone details.done summary{cursor:pointer;min-height:32px;display:flex;align-items:center}
+#phone details.done li{margin:2px 0}
+#phone .empty-note{color:var(--muted);font-size:13px;padding:4px 8px}
+#phone .add{position:absolute;left:12px;right:12px;bottom:16px;z-index:3;height:50px;border:0;border-radius:25px;background:var(--amber);color:var(--bg);font:700 15px/1 var(--display);letter-spacing:1px;box-shadow:0 6px 20px #000a}
+#phone .scrim{position:absolute;inset:0;background:#05090acc;z-index:6;display:flex;align-items:flex-end}
+#phone .sheet{width:100%;max-height:88%;overflow:auto;background:var(--panel);border-top:1px solid var(--line);border-radius:18px 18px 0 0;padding:18px 14px 18px}
+#phone .sheet h3{font:700 18px/1.2 var(--display);margin:0 0 2px;letter-spacing:.5px}
+#phone .sheet .room{font-size:13px;color:var(--muted);margin-bottom:8px}
+#phone .sheet .zone{font:600 11px/1 var(--display);letter-spacing:1px;color:var(--gold);margin:14px 0 4px}
+#phone .pick{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #1d2f33}
+#phone .pick .what{flex:1;min-width:0}
+#phone .pick .title{font-size:15px;font-weight:600}
+#phone .pick .sub{font-size:12px;color:var(--muted)}
+#phone .stepper{display:flex;align-items:center;gap:4px}
+#phone .stepper button{width:34px;height:34px;border-radius:17px;border:1px solid var(--line);background:var(--card)}
+#phone .stepper output{min-width:26px;text-align:center;font-variant-numeric:tabular-nums}
+#phone .stepper .max{width:auto;padding:0 10px;font-size:12px;border-color:var(--gold);color:var(--gold)}
+#phone .sheet .confirm{width:100%;margin-top:14px;height:50px;border:0;border-radius:25px;background:var(--amber);color:var(--bg);font:700 15px/1 var(--display);letter-spacing:1px}
+#phone .sheet .ghost{width:100%;margin-top:8px;height:44px;border-radius:22px;border:1px solid var(--line);background:transparent;font-size:14px}
+#phone .sheet .card{display:block;min-height:0}
+#phone .toast{position:absolute;left:16px;right:16px;top:132px;z-index:7;background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:10px 14px;font-size:14px;animation:toast 3.2s ease forwards;pointer-events:none}
+@keyframes toast{0%{opacity:0;transform:translateY(-6px)}8%,80%{opacity:1;transform:none}100%{opacity:0}}
+
+@media (max-width:1180px){.studio{grid-template-columns:minmax(200px,1fr) 404px;gap:34px}.review{grid-column:1/-1;max-width:760px}}
+@media (max-width:720px){.studio{display:block;padding:0 0 66px;min-height:100dvh}.brief,.review{display:none}.device{width:100%;height:calc(100dvh - 66px);border:0;border-radius:0;box-shadow:none}.device-stage{width:100%;max-width:500px;margin:auto}.device-caption{display:none}}
+@media (prefers-reduced-motion:reduce){#phone .toast{animation:none}}

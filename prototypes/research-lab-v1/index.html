@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- REVIEW PROTOTYPE research-lab v1: the H3 carousel from the lab design canvas, fish as fuel per species, one research tank per running project. -->
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Spellcraft · Research lab / 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Spectral:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+    <main class="studio">
+        <aside class="brief">
+            <a class="wordmark" href="../" target="_top">✧ SPELLCRAFT <small>DESIGN STUDIES / RESEARCH LAB 1</small></a>
+            <p class="eyebrow">RESEARCH LAB · FISK SOM BRÄNSLE</p>
+            <h1>Häll i fisk.<br>Forska.</h1>
+            <p class="intro">All fisk är bränsle. Varje art ger sitt eget bränsle, tio gånger mer per zon. Forskningen pågår bara medan tanken har bränsle och pausar utan förlust när den är tom. Projekten är själva labbets permanenta uppgraderingar: fler platser, större tank, högre fart, och bonusar i strid, mining, fiske och alchemy.</p>
+            <p class="eyebrow">GRANSKA SCENER</p>
+            <div class="scenario-buttons">
+                <button data-scene="start">Start · Labbet öppnar</button>
+                <button data-scene="running">Två projekt samtidigt</button>
+                <button data-scene="parallel">Tre projekt · bränsle × 3</button>
+                <button data-scene="empty">Tom tank · paus</button>
+                <button data-scene="mid">Mid game · 5 × tanken</button>
+                <button data-scene="late">Late game · 100 × tanken</button>
+            </div>
+            <p class="fine">Klickbar prototyp · <a href="https://github.com/Tiico/spellcraft-idle/issues/678">Uppgift #678</a><br>Utseendet följer H3 · Carousel i labbets designduk. Bränsle, forskning och kommandon simuleras lokalt. Inget sparas vid omladdning.</p>
+        </aside>
+        <section class="device-stage" aria-label="Interaktiv mobilprototyp">
+            <div class="device"><div id="phone" lang="en"></div></div>
+            <div class="device-caption"><span>●</span> PORTRAIT / H3 CAROUSEL <span>0.62.0 · REVIEW BUILD</span></div>
+        </section>
+        <aside class="review">
+            <p class="eyebrow">FRÅGA TILL GRANSKNINGEN</p>
+            <h2>Känns arbetsbänken och karusellen rätt?</h2>
+            <p class="fine">Hjulet har alltid åtta socklar och varje sockel rymmer en åttondel av tanken. Sockeln vid munstycket töms; när den är tom klickar hjulet 45 grader. Essensen går genom röret till forskningstanken, vars nivå är projektets procent.</p>
+            <ol class="review-points">
+                <li><strong>Flera projekt samtidigt.</strong><p>Varje projekt som körs samtidigt drar en gång grundförbrukningen till: två projekt drar dubbelt, tre tredubbelt. Röret grenar sig till en forskningstank per projekt, och hjulet, glöden och flödet går fortare.</p></li>
+                <li><strong>Bränsle per art.</strong><p>Zonens fyra arter ger 1, 2, 3 och 4 bränsle, nästa zon 10–40, zonen därefter 100–400. Navet visar bränslet, bränsleraden hur länge det räcker och scenen hur länge projektet tar.</p></li>
+                <li><strong>Tre sockelvisningar som H3.</strong><p>En fiskikon i starttanken, fisk med fem prickar från 3 × tanken, en tunna med nivå och siffra från 30 ×. Ekrar i mid game; guldkant, kugghjulsring, nav med ring, grövre rör, två turbiner och en ström av fisk i late game.</p></li>
+                <li><strong>Paus utan förlust.</strong><p>En tom tank stoppar hjulet, glöden och flödet. Ett projekt kan pausas och behåller sitt framsteg; det återupptas utan ny startkostnad.</p></li>
+            </ol>
+            <div class="review-actions">
+                <p class="eyebrow">DEMOHANDLINGAR</p>
+                <div class="demo-grid">
+                    <button data-demo="catch">+ Fångst från öppna zoner</button>
+                    <button data-demo="boss">Bossvinst (nästa fiskezon)</button>
+                    <button data-demo="skip10m">Tid +10 min</button>
+                    <button data-demo="skip1h">Tid +1 h</button>
+                    <button data-demo="away8h">Borta 8 h</button>
+                    <button data-demo="away30h">Borta 30 h (tak 12 h)</button>
+                    <button data-demo="grimoire-slot">Grimoire: två platser till</button>
+                    <button data-demo="grimoire-tank">Grimoire: tank × 20</button>
+                    <button data-demo="grimoire-speed">Grimoire: fart × 10</button>
+                </div>
+                <p class="eyebrow">DEMOTID</p>
+                <div class="time-grid">
+                    <button data-time="1">× 1</button>
+                    <button data-time="60">× 60</button>
+                    <button data-time="600">× 600</button>
+                </div>
+            </div>
+            <details><summary>Prototyptillstånd</summary><pre id="state"></pre></details>
+            <p class="fine"><b>Platshållare:</b> projektnamn, effekter, tider, startkostnader, tankstegen och Grimoire-knapparna är granskningsförslag. Bränslet per art följer beslutet i #678. Grafiken följer H3 i vektorform; bilderna genereras senare enligt pixelguiden.</p>
+        </aside>
+    </main>
+    <nav class="scene-bar" aria-label="Byt granskningsscen"><button id="previous" aria-label="Föregående scen">←</button><b id="scene-label"></b><button id="next" aria-label="Nästa scen">→</button></nav>
+    <script src="lab-model.js"></script>
+    <script src="lab-ui.js"></script>
+</body>
+</html>
