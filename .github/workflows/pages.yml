@@ -38,6 +38,12 @@ jobs:
           if [ -d prototypes ]; then
             cp -R prototypes "$RUNNER_TEMP/design-pages/prototypes"
           fi
+          # The game's public pages (#1052), published from the game repository's docs/public/ by scripts/publish-public-pages.ps1.
+          for page in account-deletion; do
+            if [ -d "$page" ]; then
+              cp -R "$page" "$RUNNER_TEMP/design-pages/$page"
+            fi
+          done
           touch "$RUNNER_TEMP/design-pages/.nojekyll"
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
